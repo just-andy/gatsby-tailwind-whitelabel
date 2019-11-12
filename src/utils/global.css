@@ -24,6 +24,11 @@ a {
   @apply text-primary;
 }
 
+ol li {
+  @apply pl-1;
+  @apply pb-1;
+}
+
 p {
   @apply mb-4;
 }

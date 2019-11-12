@@ -1,16 +1,14 @@
-const { colors } = require("tailwindcss/defaultTheme")
-
 module.exports = {
   theme: {
     colors: {
       primary: "#ff6699",
       secondary: "#007ace",
-      black: colors.black,
-      white: colors.white,
-      gray: colors.gray,
-      red: colors.red,
-      yellow: colors.yellow,
-      green: colors.green,
+      black: "#222222",
+      white: "#ffffff",
+      gray: "#cccccc",
+      red: "red",
+      yellow: "yellow",
+      green: "green",
     },
     screens: {
       sm: "640px",
