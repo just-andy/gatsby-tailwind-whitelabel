@@ -1,22 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import Pages from "../../data/navigation"
+
 const Navigation = () => {
   return (
     <nav>
       <ul className="flex justify-between">
-        <li>
-          <Link to="">Home</Link>
-        </li>
-        <li>
-          <Link to="">About</Link>
-        </li>
-        <li>
-          <Link to="/pricelist">Prices</Link>
-        </li>
-        <li>
-          <Link to="">Contact</Link>
-        </li>
+        {Pages.map((page, index) => {
+          return (
+            <li key={index}>
+              <Link to={page.url} activeClassName="active">
+                {page.name}
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     </nav>
   )
