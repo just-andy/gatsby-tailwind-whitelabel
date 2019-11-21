@@ -17,7 +17,7 @@ const Textarea = styled.textarea`
 `
 
 const Button = styled.button`
-  ${tw`bg-primary hover:bg-secondary text-white p-4 rounded`}
+  ${tw`bg-primary hover:bg-primary-dark text-white p-4 rounded`}
 `
 
 const ContactForm = () => {

@@ -13,7 +13,7 @@ const TableRow = styled.tr`
   border-bottom: 1px solid #ccc;
 
   &:nth-child(even) {
-    background-color: #efefef;
+    ${tw`bg-primary-lightest`}
   }
 `
 
@@ -26,9 +26,9 @@ const SimplePricelist = () => {
     <Table>
       <thead>
         <tr>
-          <th className="w-1/2 text-left">Treatment</th>
-          <th className="w-1/4 text-left">Price</th>
-          <th className="w-1/4 text-left">Time</th>
+          <th className="w-1/2 p-2 md:p-3 text-left">Treatment</th>
+          <th className="w-1/4 p-2 md:p-3 text-left">Price</th>
+          <th className="w-1/4 p-2 md:p-3 text-left">Time</th>
         </tr>
       </thead>
       <tbody>
@@ -44,7 +44,7 @@ const SimplePricelist = () => {
       </tbody>
       <tfoot>
         <tr>
-          <td colSpan="3" className="text-center py-4">
+          <td colSpan="3" className="text-center text-gray-600 py-4">
             Terms and conditions
           </td>
         </tr>

@@ -1,12 +1,5 @@
 @tailwind base;
 
-body {
-  @apply bg-gray-200;
-}
-
-.container {
-  @apply bg-white;
-}
 
 h1,
 h2,
@@ -53,6 +46,12 @@ p {
 /** Buttons **/
 .btn {
   @apply inline-block py-3 px-6 mt-4 rounded shadow leading-none;
+}
+
+@screen lg{
+  .btn {
+    @apply mt-0;
+  }
 }
 
 .btn-primary {

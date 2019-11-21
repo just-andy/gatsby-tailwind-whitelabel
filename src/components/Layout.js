@@ -6,11 +6,11 @@ import Footer from "../components/Footer"
 
 export const Layout = ({ children }) => {
   return (
-    <>
+    <div>
       <Header />
       <main className="container mx-auto px-2">{children}</main>
       <Footer />
-    </>
+    </div>
   )
 }
 
