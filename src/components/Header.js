@@ -5,12 +5,16 @@ import Navigation from "../components/modules/Navigation"
 
 const Header = () => {
   return (
-    <nav className="flex flex-wrap items-center justify-between py-8">
-      <div className="flex flex-shrink-0 mr-6">
-        <Link to="/">Just Salons</Link>
+    <div className="container mx-auto px-2 py-4">
+      <div className="flex flex-wrap items-center justify-between">
+        <div>
+          <Link to="/"><span className="text-3xl font-bold">Just Salons</span></Link>
+        </div>
+        <div className="">
+         <Navigation />
+        </div>
       </div>
-      <Navigation />
-    </nav>
+    </div>
   )
 }
 

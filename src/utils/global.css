@@ -50,4 +50,25 @@ p {
 
 @tailwind components;
 
+/** Buttons **/
+.btn {
+  @apply inline-block py-3 px-6 mt-4 rounded shadow leading-none;
+}
+
+.btn-primary {
+  @apply bg-primary text-white;
+}
+
+.btn-primary:hover {
+    @apply bg-primary-dark text-white;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white;
+}
+
+.btn-secondary:hover {
+  @apply bg-secondary-dark text-white;
+}
+
 @tailwind utilities;

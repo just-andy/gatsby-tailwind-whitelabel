@@ -21,9 +21,7 @@ const Navigation = () => {
       })}
       <li>
         <Link
-          to="/"
-          className="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-primary hover:bg-secondary rounded shadow"
-        >
+          to="/" className="btn btn-primary">
           Book Now
         </Link>
       </li>
