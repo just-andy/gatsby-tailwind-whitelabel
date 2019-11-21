@@ -5,7 +5,20 @@ import tw from "tailwind.macro"
 import prices from "../../data/simpleprices"
 
 const Table = styled.table`
-  ${tw`table-fixed`}
+  ${tw`mt-4`}
+  width: 100%;
+`
+
+const TableRow = styled.tr`
+  border-bottom: 1px solid #ccc;
+
+  &:nth-child(even) {
+    background-color: #efefef;
+  }
+`
+
+const TableCell = styled.td`
+  ${tw`p-2 md:p-4`}
 `
 
 const SimplePricelist = () => {
@@ -13,26 +26,25 @@ const SimplePricelist = () => {
     <Table>
       <thead>
         <tr>
-          <th className="w-1/2 px-4 py-2">Treatment</th>
-          <th className="w-1/4 px-4 py-2">Price</th>
-          <th className="w-1/4 px-4 py-2">Time</th>
+          <th className="w-1/2 text-left">Treatment</th>
+          <th className="w-1/4 text-left">Price</th>
+          <th className="w-1/4 text-left">Time</th>
         </tr>
       </thead>
       <tbody>
         {prices.map((item, index) => {
           return (
-            <tr key={index}>
-              <td className="border px-4 py-2">{item.treatment}</td>
-              <td className="border px-4 py-2">&pound; {item.price}</td>
-              <td className="border px-4 py-2">{item.time} minutes</td>
-            </tr>
+            <TableRow key={index}>
+              <TableCell>{item.treatment}</TableCell>
+              <TableCell>&pound; {item.price}</TableCell>
+              <TableCell>{item.time} mins</TableCell>
+            </TableRow>
           )
         })}
       </tbody>
       <tfoot>
         <tr>
-          <td colSpan="3" className="text-gray text-center py-4">
-            {" "}
+          <td colSpan="3" className="text-center py-4">
             Terms and conditions
           </td>
         </tr>

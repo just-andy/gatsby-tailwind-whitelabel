@@ -1,12 +1,14 @@
+// tailwind.config.js
+const { colors } = require("tailwindcss/defaultTheme")
+
 module.exports = {
   theme: {
     colors: {
       primary: "#ff6699",
       secondary: "#007ace",
-      black: "#222222",
-      white: "#ffffff",
-      gray: "#cccccc",
-      red: "red",
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray,
     },
     screens: {
       sm: "640px",
@@ -16,4 +18,7 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  corePlugins: {
+    tableLayout: false,
+  },
 }

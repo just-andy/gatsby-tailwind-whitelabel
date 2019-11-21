@@ -1,12 +1,19 @@
 @tailwind base;
 
+body {
+  @apply bg-gray-200;
+}
+
+.container {
+  @apply bg-white;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply font-serif;
   @apply mb-2;
   @apply mt-3;
 }
@@ -21,6 +28,14 @@ h3 {
   @apply text-2xl;
 }
 a {
+  @apply text-primary;
+}
+
+a:hover {
+  @apply text-secondary;
+}
+
+a .active {
   @apply text-primary;
 }
 
