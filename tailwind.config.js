@@ -7,8 +7,6 @@ module.exports = {
       white: "#ffffff",
       gray: "#cccccc",
       red: "red",
-      yellow: "yellow",
-      green: "green",
     },
     screens: {
       sm: "640px",
