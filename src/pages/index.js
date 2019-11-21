@@ -13,14 +13,12 @@ export default () => (
       roots in a piece of classical Latin literature from 45 BC, making it over
       2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
     </p>
-
+<DualCards /<
     <ul>
       <li>List Item</li>
       <li>List Item</li>
       <li>List Item</li>
     </ul>
-
-    <DualCards />
 
     <h2>Heading 2</h2>
 
