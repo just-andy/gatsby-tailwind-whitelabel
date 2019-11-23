@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Pages from "../../data/navigation"
+import Pages from "../../../data/navigation"
 
 const Navigation = () => {
   return (
@@ -12,7 +12,7 @@ const Navigation = () => {
             <Link
               to={page.url}
               activeClassName="active"
-              className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-black"
+              className="block lg:inline-block mt-4 lg:mt-0 mr-6 text-blue-900 hover:text-black"
             >
               {page.name}
             </Link>

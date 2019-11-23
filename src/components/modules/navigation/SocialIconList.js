@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import tw from "tailwind.macro"
 
-import socialIcons from "../../data/socialicons"
+import socialIcons from "../../../data/socialicons"
 
 const InlineList = styled.ul`
   ${tw`my-2`};

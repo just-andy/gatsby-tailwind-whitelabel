@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Form from "../components/modules/ContactForm"
+import Form from "../components/modules/forms/ContactForm"
 import SEO from "../components/SEO"
 
 export default () => (

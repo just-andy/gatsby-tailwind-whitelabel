@@ -8,6 +8,10 @@ export default [
     name: "About",
   },
   {
+    url: "/gallery",
+    name: "Gallery",
+  },
+  {
     url: "/pricelist",
     name: "Pricelist",
   },
