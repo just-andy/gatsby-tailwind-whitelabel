@@ -6,7 +6,7 @@ import socialIcons from "../../../data/socialicons"
 
 const InlineList = styled.ul`
   ${tw`my-2`};
-  ${tw`text-4xl`};
+  ${tw`text-3xl`};
   ${tw`flex justify-center`};
 `
 

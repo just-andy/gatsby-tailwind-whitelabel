@@ -12,7 +12,7 @@ const Navigation = () => {
             <Link
               to={page.url}
               activeClassName="active"
-              className="block lg:inline-block mt-4 lg:mt-0 mr-6 text-blue-900 hover:text-black"
+              className="block lg:inline-block mt-4 lg:mt-0 mr-6"
             >
               {page.name}
             </Link>

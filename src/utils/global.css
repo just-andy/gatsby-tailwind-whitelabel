@@ -21,15 +21,15 @@ h3 {
   @apply text-2xl;
 }
 a {
-  @apply text-primary;
+  @apply text-primary-500;
 }
 
 a:hover {
-  @apply text-secondary;
+  @apply text-secondary-900;
 }
 
 a .active {
-  @apply text-primary;
+  @apply text-primary-900;
 }
 
 ol li {
@@ -55,19 +55,27 @@ p {
 }
 
 .btn-primary {
-  @apply bg-primary text-white;
+  @apply bg-primary-500 text-white;
 }
 
 .btn-primary:hover {
-    @apply bg-primary-dark text-white;
+    @apply bg-secondary-900 text-white;
 }
 
 .btn-secondary {
-  @apply bg-secondary text-white;
+  @apply bg-secondary-500 text-white;
 }
 
 .btn-secondary:hover {
-  @apply bg-secondary-dark text-white;
+  @apply bg-secondary-900 text-white;
+}
+
+.thumbnail {
+  @apply p-1 border-solid border-2 border-gray-200;
+}
+
+.section-spacer {
+  @apply my-6;
 }
 
 @tailwind utilities;
