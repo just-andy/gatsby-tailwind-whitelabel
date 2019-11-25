@@ -1,10 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
 import DualCards from "../components/modules/general/DualCards"
-import Media from "../components/modules/galleries/MediaSplit"
+import LogoGallery from "../components/modules/galleries/LogoGallery"
 
 import SEO from "../components/SEO"
-import MediaSplit from "../components/modules/galleries/MediaSplit"
 
 export default () => (
   <Layout>
@@ -21,8 +20,8 @@ export default () => (
       <li>List Item</li>
       <li>List Item</li>
     </ul>
+    <LogoGallery />
 
-<MediaSplit />
     <h2>Heading 2</h2>
 
     <p>
