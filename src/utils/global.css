@@ -27,7 +27,7 @@ a:hover {
   @apply text-secondary-900;
 }
 
-a .active {
+.active {
   @apply text-primary-900;
 }
 

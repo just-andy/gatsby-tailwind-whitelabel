@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContentTestimonial = () => {
     return (
-    <section className="py-8 px-4">
+    <section className="section-spacer">
         <div className="flex flex-wrap items-center -mx-2">
             <div className="lg:w-2/5 px-2 lg:pr-16 mb-6 lg:mb-0">
                 <h3>Welcome to Just Salons</h3>

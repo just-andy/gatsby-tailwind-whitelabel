@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Pricelist from "../components/modules/SimplePricelist"
+import SEO from "../components/SEO"
 
 export default () => (
   <Layout>
+    <SEO title="Pricelist" description="Just salon offers a range of pricelist templates to suit your business" />
     <h1>Pricelist</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

@@ -10,16 +10,9 @@ export default () => (
   <Layout>
     <SEO title="Welcome to Just Salons" description="Just Salons demo site" />
 
-    <section className="section-spacer">
-      <h1>Heading 1</h1>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-        roots in a piece of classical Latin literature from 45 BC, making it over
-        2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-      </p>
-    </section>
+    <ContentTemplate />
     <DualCards />
-<ContentTemplate />
+
     <LogoGallery />
 
     <section className="section-spacer">
