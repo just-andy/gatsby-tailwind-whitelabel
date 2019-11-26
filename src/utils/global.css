@@ -1,6 +1,5 @@
 @tailwind base;
 
-
 h1,
 h2,
 h3,
@@ -41,6 +40,16 @@ p {
   @apply mb-4;
 }
 
+.container {
+  @apply px-4;
+}
+
+@screen lg{
+  .container {
+    @apply px-2;
+  }
+}
+
 @tailwind components;
 
 /** Buttons **/
@@ -77,5 +86,7 @@ p {
 .section-spacer {
   @apply my-6;
 }
+
+
 
 @tailwind utilities;

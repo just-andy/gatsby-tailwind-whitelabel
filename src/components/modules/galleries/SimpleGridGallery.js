@@ -6,13 +6,11 @@ const GridGallery = styled.div`
     ${tw`w-full md:w-1/2 lg:w-1/3 p-2`};
 `
 
-
 const SimpleGridGallery = () => {
 
 
     return (
-    <div className="flex flex-wrap">
-       
+    <section className="section-spacer flex flex-wrap ">
         <GridGallery>
            <img className="thumbnail" alt="Placeholder"  src="https://via.placeholder.com/540x540.png?text=GalleryImage" />
         </GridGallery>
@@ -38,7 +36,7 @@ const SimpleGridGallery = () => {
            <img className="thumbnail" alt="Placeholder"   src="https://via.placeholder.com/540x540.png?text=GalleryImage" />
         </GridGallery>
 
-    </div>
+    </section>
     )
 }
 

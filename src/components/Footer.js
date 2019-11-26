@@ -3,10 +3,12 @@ import SocialLinks from "./modules/navigation/SocialIconList"
 
 const Footer = () => {
   return (
-    <footer className="container mx-auto py-6 px-2 flex justify-between">
-      <div className="leading-loose">&copy;2019 Social Icons</div>
-      <SocialLinks />
-    </footer>
+    <section className="container mx-auto section-spacer">
+      <footer className="flex flex-wrap items-center justify-between">
+        <div className="w-full text-center lg:w-auto lg:mr-6 mb-4 lg:mb-0">&copy;2019 Social Icons</div>
+        <SocialLinks />
+      </footer>
+    </section>
   )
 }
 

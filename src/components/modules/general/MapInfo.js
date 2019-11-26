@@ -4,7 +4,7 @@ const MapInfo = () => {
     return (
         <>
         <div id="map">
-            <img alt="Map" className="thumbnail" src="https://via.placeholder.com/540x320.png?text=GalleryImage" />
+            <img alt="Map" className="thumbnail" src="https://via.placeholder.com/540x320.png?text=Google+Map" />
         </div>
        
        <div>
@@ -20,8 +20,7 @@ const MapInfo = () => {
                 <span itemprop="addressLocality">Paris, France</span>
 
             </address>
-            Tel:<span itemprop="telephone">( 33 1) 42 68 53 00 </span> &middot; 
-            <span itemprop="email">secretariat(at)google.org</span>
+            Tel:<span itemprop="telephone">( 33 1) 42 68 53 00 </span>&nbsp;&middot;&nbsp;<span itemprop="email">secretariat(at)google.org</span>
             </div>
         </div>
         </>

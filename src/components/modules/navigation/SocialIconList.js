@@ -5,9 +5,7 @@ import tw from "tailwind.macro"
 import socialIcons from "../../../data/socialicons"
 
 const InlineList = styled.ul`
-  ${tw`my-2`};
-  ${tw`text-3xl`};
-  ${tw`flex justify-center`};
+  ${tw`my-2 text-3xl flex justify-center text-center mx-auto lg:text-right lg:mx-0`};
 `
 
 const SocialIconList = () => {
