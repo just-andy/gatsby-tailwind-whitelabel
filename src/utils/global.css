@@ -40,8 +40,13 @@ p {
   @apply mb-4;
 }
 
+.lead {
+  @apply text-2xl;
+}
+
 .container {
   @apply px-4;
+  @apply w-8/12;
 }
 
 @screen lg{

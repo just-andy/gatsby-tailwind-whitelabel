@@ -44,8 +44,8 @@ const SimplePricelist = () => {
       </tbody>
       <tfoot>
         <tr>
-          <td colSpan="3" className="text-center text-gray-500 py-4">
-            Terms and conditions
+          <td colSpan="3" className="text-center text-gray-600 py-4">
+            <b>Note:</b> Some of our skin treatments require a 24 hour patch test.
           </td>
         </tr>
       </tfoot>

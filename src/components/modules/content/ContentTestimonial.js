@@ -1,6 +1,11 @@
 import React from 'react'
+import Testimonial from "../content/Testimonial"
 
 const ContentTestimonial = () => {
+
+    const myQuote = "This is where you can let customers know what great things other clients have said about you."
+    const myCitation = "Andy, Edinburgh"
+
     return (
     <section className="section-spacer">
         <div className="flex flex-wrap items-center -mx-2">
@@ -10,8 +15,9 @@ const ContentTestimonial = () => {
                 <p>This is just one example of how the page can look. We are working on a range of templates to pick on for each page type.</p>
             </div>
             <div className="lg:w-3/5 px-2 mb-6">
-                <p className="text-3xl mb-4 text-gray-700"> This is where you would display a client testimonial showing how great you and your salon is.</p>
-                <span href="#" className="text-secondary-700">Client Name, Location</span>
+                <div className="w-8/12 mx-auto lg:w-full">
+                <Testimonial quote={myQuote} cite={myCitation} />
+                </div>
             </div>
         </div>
     </section>

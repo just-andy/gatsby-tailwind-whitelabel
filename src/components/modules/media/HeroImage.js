@@ -2,7 +2,7 @@ import React from "react"
 
 const HeroImage = () => {
   return (
-    <section className="text-center">
+    <section className="text-center mb-8">
       <div className="relative flex items-center py-32">
           <div className="absolute inset-0  bg-gray-300 ">
             <div className="z-10 max-w-2xl mx-auto">

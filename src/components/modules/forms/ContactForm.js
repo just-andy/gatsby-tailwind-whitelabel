@@ -9,16 +9,17 @@ const Label = styled.label`
   ${tw`block text-sm font-bold mb-2`}
 `
 const Input = styled.input`
-  ${tw`shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline`}
+  ${tw` appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline`}
 `
 
 const Textarea = styled.textarea`
-  ${tw`shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline`}
+  ${tw`appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline`}
 `
 
 
 const ContactForm = () => {
   return (
+
     <form className="mb-6">
       <FieldWrapper>
         <Label for="name">Your Name</Label>

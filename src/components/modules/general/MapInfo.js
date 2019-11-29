@@ -1,4 +1,5 @@
 import React from 'react'
+import OpeningHours from './OpeningHours'
 
 const MapInfo = () => {
     return (
@@ -8,20 +9,23 @@ const MapInfo = () => {
         </div>
        
        <div>
-            <h3>Company Name</h3>
           
             <div itemscope itemtype="http://schema.org/Organization">
-            <span itemprop="name">Google.org (GOOG)</span>
+            <h4 itemprop="name">Just Salons</h4>
             
             <address className="py-2" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 
-                <span itemprop="streetAddress">38 avenue de l'Opera</span>
-                <span itemprop="postalCode">F-75002</span>
-                <span itemprop="addressLocality">Paris, France</span>
+                <span itemprop="streetAddress">12 Acme Street</span>
+                <span itemprop="postalCode">EH11 1AB</span>
+                <span itemprop="addressLocality">Edinburgh, Scotland</span>
 
             </address>
-            Tel:<span itemprop="telephone">( 33 1) 42 68 53 00 </span>&nbsp;&middot;&nbsp;<span itemprop="email">secretariat(at)google.org</span>
+            Tel:<span itemprop="telephone">0131 123 4567 </span>&nbsp;&middot;&nbsp;<span itemprop="email">demo(at)just-salons.co.uk</span>
             </div>
+            <h4>Opening Hours</h4>
+            <ul className="flex justify-between">
+                <OpeningHours />
+            </ul>
         </div>
         </>
     )

@@ -20,6 +20,7 @@ const DualCardsTitle = styled.h3`
 
 const DualCards = () => {
   return (
+ 
     <DualCardsWrapper>
       <DualCardLeft>
         <DualCardsTitle>No Bull$h*t</DualCardsTitle>
@@ -36,6 +37,7 @@ const DualCards = () => {
         </p>
       </DualCardRight>
     </DualCardsWrapper>
+
   )
 }
 
