@@ -26,5 +26,5 @@ export default [
     {
         day : "Sunday",
         hours : "Closed"
-    },
+    }
 ]

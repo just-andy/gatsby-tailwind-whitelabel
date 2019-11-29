@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 This is a demo salon site built using
 
@@ -6,8 +6,15 @@ This is a demo salon site built using
 - Gatsby
 - Emotion Styled
 
-The plan is to make it easily configurable and deploy to netlify cms
+The plan is to make it easily configurable and deploy to netlify.
 
-# Data
+This is a good test bed for how design systems should work
+
+### Structure
+
+Modules are broken into their use case, idea copied from tailwind component sites.
+Overtime items may break or separate.
+
+### Data
 
 JSON files in the Data folder can be edited to update content on the pages

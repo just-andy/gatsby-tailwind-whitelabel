@@ -22,8 +22,8 @@ const MapInfo = () => {
             </address>
             Tel:<span itemprop="telephone">0131 123 4567 </span>&nbsp;&middot;&nbsp;<span itemprop="email">demo(at)just-salons.co.uk</span>
             </div>
-            <h4>Opening Hours</h4>
-            <ul className="flex justify-between">
+            <h3>Opening Hours</h3>
+            <ul className="flex flex-col justify-between">
                 <OpeningHours />
             </ul>
         </div>

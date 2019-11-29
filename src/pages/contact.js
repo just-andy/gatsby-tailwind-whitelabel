@@ -10,7 +10,7 @@ export default () => (
 
     <h1>Contact</h1>
 
-    <p class="lead">Whether it is your contact details, dropping a message or trying to find your salon this is the page to do it. Aside from pricelists this is one of the most trafficked pages on the site.</p>
+    <p className="lead">Whether it is your contact details, dropping a message or trying to find your salon this is the page to do it. Aside from pricelists this is one of the most trafficked pages on the site.</p>
    
    <p>It is a great location to call out things like free parking, when you handle correspondance. It's also a good place to set an initial tone about your business, so think about how you word your replies.</p>
 

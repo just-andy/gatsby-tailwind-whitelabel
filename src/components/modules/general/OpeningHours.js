@@ -1,9 +1,17 @@
 import React from "react"
-import hours from "./../../openinghours"
+import hours from "../../../data/openinghours.js"
 
 const OpeningHours = () => {
     return (
-       console.log(hours)
+        <>
+        {hours.map((item,index) => {
+            return(
+            <li key={index}>
+            {item.day} - {item.hours}
+            </li>
+            )
+        })}
+        </>
     )
 }
 
