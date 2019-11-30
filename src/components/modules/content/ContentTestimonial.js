@@ -15,7 +15,7 @@ const ContentTestimonial = () => {
                 <p>This is just one example of how the page can look. We are working on a range of templates to pick on for each page type.</p>
             </div>
             <div className="lg:w-3/5 px-2 mb-6">
-                <div className="w-8/12 mx-auto lg:w-full">
+                <div className="w-9/12 mx-auto lg:w-full">
                 <Testimonial quote={myQuote} cite={myCitation} />
                 </div>
             </div>

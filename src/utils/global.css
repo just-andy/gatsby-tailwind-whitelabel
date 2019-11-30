@@ -28,7 +28,7 @@ a:hover {
 }
 
 .active {
-  @apply text-primary-900;
+  @apply text-accent-500;
 }
 
 ol li {
@@ -41,7 +41,7 @@ p {
 }
 
 .lead {
-  @apply text-2xl;
+  @apply text-xl;
 }
 
 .container {
@@ -72,9 +72,10 @@ p {
   @apply bg-primary-500 text-white;
 }
 
-.btn-primary:hover {
+.btn-primary:hover.  {
     @apply bg-secondary-900 text-white;
 }
+
 
 .btn-secondary {
   @apply bg-secondary-500 text-white;
@@ -82,6 +83,10 @@ p {
 
 .btn-secondary:hover {
   @apply bg-secondary-900 text-white;
+}
+
+.btn-primary-active {
+  @apply bg-accent-500 text-white;
 }
 
 .thumbnail {

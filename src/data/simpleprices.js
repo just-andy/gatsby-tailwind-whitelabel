@@ -1,5 +1,15 @@
 export default [
   {
+    treatment: "Spray Tan - Arms & Legs",
+    price: "15.00",
+    time: "20",
+  },
+  {
+    treatment: "Spray Tan - Full Body",
+    price: "25.00",
+    time: "40",
+  },
+  {
     treatment: "Manicure",
     price: "30.00",
     time: "40",
@@ -21,7 +31,22 @@ export default [
   },
   {
     treatment: "Eyebrow Wax",
-    price: "50.00",
-    time: "30",
+    price: "10.00",
+    time: "10",
+  },
+  {
+    treatment: "Underarm",
+    price: "15.00",
+    time: "20",
+  },
+  {
+    treatment: "Leg Wax",
+    price: "30.00",
+    time: "25",
+  },
+  {
+    treatment: "Bikini Wax",
+    price: "32.00",
+    time: "20",
   },
 ]

@@ -21,7 +21,7 @@ const Navigation = () => {
       })}
       <li>
         <Link
-          to="/" className="btn btn-primary">
+          to="/book-now" className="btn btn-primary" activeClassName="btn-primary-active">
           Book Now
         </Link>
       </li>

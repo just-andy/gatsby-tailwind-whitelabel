@@ -22,12 +22,21 @@ JSON files in the Data folder can be edited to update content on the pages
 
 # To Do List
 
+### CSS
+- [ ] Fix the overall width
 - [ ] Make the mobile navigation
 - [ ] Make the lightbox for the gallery
 - [ ] Tidy up colours to use less colours
-- [ ] Try PostCSS to clean up css
-- [ ] Create a booking page
-- [ ] Create a form success page
+- [ ] Make the spacer margins consistent
+
+### Gatsby
 - [ ] Add sitemap plugin
 - [ ] Add google maps plugin
 - [ ] Add Gatsby Image
+- [ ] Try PostCSS to clean up css
+
+### Pages/Content/Modules/Design
+- [x] Create a booking page
+- [x] Create a form success page
+- [ ] Create a dummy logo
+- [ ] Add image content
