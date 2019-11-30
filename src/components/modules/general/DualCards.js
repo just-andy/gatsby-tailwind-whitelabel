@@ -1,4 +1,6 @@
 import React from "react"
+import {TiStarburstOutline, TiScissorsOutline} from "react-icons/ti"
+import {Link} from "gatsby"
 import styled from "@emotion/styled"
 import tw from "tailwind.macro"
 
@@ -23,18 +25,21 @@ const DualCards = () => {
  
     <DualCardsWrapper>
       <DualCardLeft>
-        <DualCardsTitle>No Bull$h*t</DualCardsTitle>
+        <TiStarburstOutline className="mx-auto mb-3 text-5xl fill-current text-primary" />
+        <DualCardsTitle>Special Offers</DualCardsTitle>
         <p>
-          I've been helping hair and beauty therapists for over ten years
-          promote their business online.
+          It's a great idea to call out special offers or promotions on your homepage. Whether people find the site organically or directed of social media, it is a great shop window.
         </p>
+        <Link to="book-now" className="btn btn-secondary">View Offers</Link>
+
       </DualCardLeft>
       <DualCardRight>
-        <DualCardsTitle>Straight Answers</DualCardsTitle>
+        <TiScissorsOutline className="mx-auto mb-3 text-5xl fill-current text-secondary" />
+        <DualCardsTitle>Key Services</DualCardsTitle>
         <p>
-          Multi-functional paper for various office needs. Snow-white sheets
-          will shine bright like diamond for many years.
+          Call out your key services or a page you want to direct people to in this section. Icons and images can be added on top to draw the users eye.
         </p>
+        <Link to="/about" className="btn btn-secondary">More Info</Link>
       </DualCardRight>
     </DualCardsWrapper>
 

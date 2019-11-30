@@ -7,7 +7,7 @@ const OpeningHours = () => {
         {hours.map((item,index) => {
             return(
             <li key={index}>
-            {item.day} - {item.hours}
+            <b>{item.day}</b>: {item.hours}
             </li>
             )
         })}

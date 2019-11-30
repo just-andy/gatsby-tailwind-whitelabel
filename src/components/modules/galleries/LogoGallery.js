@@ -11,7 +11,7 @@ const LogoGallery = () => {
             {logos.map((logo, index) => {
                 return (
                     <div key={index} className="w-1/3 md:w-1/6 px-8 mb-4 md:mb-0">
-                        <img src={"images/placeholders/" + logo + ".svg"} alt={logo + " Logo"} />
+                        <img src={"/placeholders/" + logo + ".svg"} alt={logo + " Logo"} />
                     </div>
                 )
             })}

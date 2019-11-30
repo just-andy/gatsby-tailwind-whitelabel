@@ -94,7 +94,7 @@ p {
 }
 
 .section-spacer {
-  @apply my-6;
+  @apply py-10;
 }
 
 

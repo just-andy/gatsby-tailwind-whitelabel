@@ -7,11 +7,10 @@ export default () => (
   <Layout>
       
     <h1>Gallery</h1>
-    <p>
-      Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-      roots in a piece of classical Latin literature from 45 BC, making it over
-      2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney.
+    <p className="lead">
+      Showcase your cuts, nails, tan, product range or basically whatever you want in here.
     </p>
+    <p>To make it easy we have used the same sizes as Instagram, so filter away and then add them toy our gallery.</p>
 
     <SimpleGallery />
   </Layout>

@@ -11,16 +11,16 @@ const MapInfo = () => {
        <div>
           
             <div itemscope itemtype="http://schema.org/Organization">
-            <h4 itemprop="name">Just Salons</h4>
+            <h3 itemprop="name">Just Salons</h3>
             
-            <address className="py-2" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <address className="py-2 not-italic" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 
-                <span itemprop="streetAddress">12 Acme Street</span>
-                <span itemprop="postalCode">EH11 1AB</span>
+                <span itemprop="streetAddress">12 Acme Street,</span>
+                <span itemprop="postalCode">EH11 1AB, </span>
                 <span itemprop="addressLocality">Edinburgh, Scotland</span>
 
             </address>
-            Tel:<span itemprop="telephone">0131 123 4567 </span>&nbsp;&middot;&nbsp;<span itemprop="email">demo(at)just-salons.co.uk</span>
+           <span itemprop="telephone">0131 123 4567 </span>&nbsp;&middot;&nbsp;<span itemprop="email">demo(at)just-salons.co.uk</span>
             </div>
             <h3>Opening Hours</h3>
             <ul className="flex flex-col justify-between">

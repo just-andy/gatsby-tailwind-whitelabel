@@ -5,16 +5,19 @@ import tw from "tailwind.macro"
 import prices from "../../data/simpleprices"
 
 const Table = styled.table`
-  ${tw`mt-4`}
-  width: 100%;
+  ${tw`my-8 mx-auto border-solid border-2 border-gray-300 w-full lg:w-10/12 lg:my-16 `}
 `
 
 const TableRow = styled.tr`
-  border-bottom: 1px solid #ccc;
+${tw`border-solid border-b-2 border-gray-300`}
 
   &:nth-child(even) {
-    ${tw`bg-gray-100`}
+    ${tw`bg-primary-100`}
   }
+`
+
+const TableHead = styled.thead`
+  ${tw`bg-primary-300 border-solid border-b-2 border-gray-300`}
 `
 
 const TableCell = styled.td`
@@ -24,13 +27,13 @@ const TableCell = styled.td`
 const SimplePricelist = () => {
   return (
     <Table>
-      <thead>
+      <TableHead>
         <tr>
           <th className="w-1/2 p-2 md:p-3 text-left">Treatment</th>
           <th className="w-1/4 p-2 md:p-3 text-left">Price</th>
           <th className="w-1/4 p-2 md:p-3 text-left">Time</th>
         </tr>
-      </thead>
+      </TableHead>
       <tbody>
         {prices.map((item, index) => {
           return (
@@ -44,7 +47,7 @@ const SimplePricelist = () => {
       </tbody>
       <tfoot>
         <tr>
-          <td colSpan="3" className="text-center text-gray-600 py-4">
+          <td colSpan="3" className="text-center text-gray-600 p-4">
             <b>Note:</b> Some of our skin treatments require a 24 hour patch test.
           </td>
         </tr>
