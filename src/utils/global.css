@@ -72,7 +72,7 @@ p {
   @apply bg-primary-500 text-white;
 }
 
-.btn-primary:hover.  {
+.btn-primary:hover  {
     @apply bg-secondary-900 text-white;
 }
 

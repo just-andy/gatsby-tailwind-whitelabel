@@ -8,7 +8,7 @@ const Navigation = () => {
     <ul className="lg:flex lg:flex-grow lg:items-center w-full lg:w-auto">
       {Pages.map((page, index) => {
         return (
-          <li key={index}>
+          <li key={index} className="py-1">
             <Link
               to={page.url}
               activeClassName="active"

@@ -13,7 +13,7 @@ const SocialIconList = () => {
     <InlineList>
       {socialIcons.map((item, index) => {
         return (
-          <li className="pr-3">
+          <li key={index} className="pr-3">
             <a
               key={index}
               href={item.url}

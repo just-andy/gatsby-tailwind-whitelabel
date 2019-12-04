@@ -2,7 +2,7 @@ import React from 'react'
 
 const LogoGallery = () => {
 
-    var logos = ['redken', 'tresemme', 'Thruster', 'jack', 'bob', "andy"];
+    var logos = ['redken',  'esteelauder', 'loreal', 'bobbibrown', 'tresemme', 'covergirl'];
 
     return (
     <section className="section-spacer">
