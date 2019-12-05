@@ -20,13 +20,10 @@ export default () => (
 
 <InlineProfile name="Joanne Bloggs" blurb="Joanne is an experience beautician with over 10 years in the game. Having worked in a number of salons in three major cities working her way up to senior therapist. Branching out on her own she set up Just Salons in 2018 and was a shortlist for the New Salon of the Year 2018 award." />
   
- 
+    <h2>Introduce your team</h2>
     <p>
-      The standard chunk of Lorem Ipsum used since the 1500s is reproduced below
-      for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus
-      Bonorum et Malorum" by Cicero are also reproduced in their exact original
-      form, accompanied by English versions from the 1914 translation by H.
-      Rackham.
+  If you have a wider team this is a good location to introduce your wider team, from reception staff through to senior stylists and therapists.
     </p>
+    <p>This can be laid out in various ways; from galleries to mini profiles. What really stands out is some great headshots and testimonials, so think about the content first.</p>
   </Layout>
 )

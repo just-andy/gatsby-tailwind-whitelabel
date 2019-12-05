@@ -5,11 +5,11 @@ import tw from "tailwind.macro"
 import prices from "../../data/simpleprices"
 
 const Table = styled.table`
-  ${tw`my-8 mx-auto border-solid border-2 border-gray-300 w-full lg:w-10/12 lg:my-16 `}
+  ${tw`my-8 mx-auto border-solid border-1 border-gray-300 w-full lg:w-10/12 lg:my-16 `}
 `
 
 const TableRow = styled.tr`
-${tw`border-solid border-b-2 border-gray-300`}
+${tw`border-solid border-b-1 border-gray-300`}
 
   &:nth-child(even) {
     ${tw`bg-primary-100`}
@@ -17,7 +17,7 @@ ${tw`border-solid border-b-2 border-gray-300`}
 `
 
 const TableHead = styled.thead`
-  ${tw`bg-primary-300 border-solid border-b-2 border-gray-300`}
+  ${tw`bg-primary-300 border-solid border-b-1 border-gray-300`}
 `
 
 const TableCell = styled.td`

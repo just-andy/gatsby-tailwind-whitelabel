@@ -22,7 +22,7 @@ const Header = () => {
           </button>
         </div>
     
-        <div className={ isOpen ? `block` : `hidden`}>
+        <div className={ isOpen ? `hidden` : `block`}>
           <Navigation />
         </div>
       </div>
