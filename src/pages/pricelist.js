@@ -6,15 +6,17 @@ import SEO from "../components/SEO"
 export default () => (
   <Layout>
     <SEO title="Pricelist" description="Just salon offers a range of pricelist templates to suit your business" />
-    <h1>Pricelist</h1>
-    <p className="lead">
-     Pricelist are the most commonly visited pages on any beauty site. New customers want to see how you compare to the competition and regular customers may just fancy trying something different.
-    </p>
+    <section className="container">
+      <h1>Pricelist</h1>
+      <p className="lead">
+      Pricelist are the most commonly visited pages on any beauty site. New customers want to see how you compare to the competition and regular customers may just fancy trying something different.
+      </p>
 
-    <p>The table below is the most simple example but any format can be created. Whether you want different sections or multiple pricelists we can create a format to suit you. </p>
+      <p>The table below is the most simple example but any format can be created. Whether you want different sections or multiple pricelists we can create a format to suit you. </p>
 
-<p> This is also a great page to add offer banners and call to actions to make an appointment online, think of it as the enterance to your salon.</p>
+  <p> This is also a great page to add offer banners and call to actions to make an appointment online, think of it as the enterance to your salon.</p>
 
-    <Pricelist />
+      <Pricelist />
+    </section>
   </Layout>
 )

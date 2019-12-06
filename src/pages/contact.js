@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 export default () => (
   <Layout>
     <SEO title="Contact Just Salons" description="How to contact Just salons" />
-
+<section className="container">
     <h1>Contact</h1>
 
     <p className="lead">Whether it is your contact details, dropping a message or trying to find your salon this is the page to do it. Aside from pricelists this is one of the most trafficked pages on the site.</p>
@@ -16,7 +16,7 @@ export default () => (
 
   <hr className="mt-4 mb-6" /> 
 
-    <section className="md:flex">   
+    <div className="md:flex">   
     
       <div className="w-full md:w-1/2 md:mr-4">
      
@@ -24,6 +24,7 @@ export default () => (
         <Form />
       </div>
       <div className="w-full md:w-1/2 md:ml-4"><Map /></div>
+    </div>
     </section>
   </Layout>
 )

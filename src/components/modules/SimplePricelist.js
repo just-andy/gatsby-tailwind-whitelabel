@@ -5,7 +5,7 @@ import tw from "tailwind.macro"
 import prices from "../../data/simpleprices"
 
 const Table = styled.table`
-  ${tw`my-8 mx-auto border-solid border-1 border-gray-300 w-full lg:w-10/12 lg:my-16 `}
+  ${tw` mx-auto border-solid border-1 border-gray-300 w-full lg:w-10/12 lg:my-8 `}
 `
 
 const TableRow = styled.tr`

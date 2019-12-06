@@ -3,6 +3,10 @@ const { colors } = require("tailwindcss/defaultTheme")
 
 module.exports = {
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+    },
     colors: {
       "primary-100": "#F0FFF4",
       "primary-300": "#9AE6B4",

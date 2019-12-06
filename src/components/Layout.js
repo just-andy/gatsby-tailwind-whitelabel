@@ -10,7 +10,7 @@ export const Layout = ({ children }) => {
     <>
       <Header />
       <Hero />
-      <main className="container mx-auto">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   )

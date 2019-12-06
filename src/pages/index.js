@@ -10,7 +10,7 @@ export default () => (
   <Layout>
     <SEO title="Welcome to Just Salons" description="Just Salons demo site" />
 
-    <section className="section-spacer">
+    <section className="container section-spacer">
         <div className="flex flex-wrap items-center -mx-2">
             <div className="lg:w-2/5 px-2 lg:pr-16 mb-6 lg:mb-0">
                 <h3>Welcome to Just Salons</h3>
@@ -27,12 +27,14 @@ export default () => (
 
 
     <div className="bg-gray-100 w-full">
-      <DualCards />
+      <div className="container">
+         <DualCards />
+      </div>
     </div>
 
 
 
-
+<div className="container">
     <section className="section-spacer">
       <h2>Heading 2</h2>
       <p>
@@ -44,6 +46,6 @@ export default () => (
       </p>
     </section>
     <LogoGallery />
-
+    </div>
   </Layout>
 )

@@ -4,7 +4,7 @@ import {Link} from "gatsby"
 const HeroImage = () => {
 
   return (
-    <section className="text-center">
+    <section className="text-center mb-6 lg:mb-12">
       <div className="bg-gray-300 py-8 lg:py-10">
           
             <div className="w-10/12 mx-auto lg:w-6/12">
