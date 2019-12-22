@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Hero from "../components/modules/media/HeroImage"
 import DualCards from "../components/modules/general/DualCards"
 import LogoGallery from "../components/modules/galleries/LogoGallery"
 import Testimonial from "../components/modules/content/Testimonial"
@@ -9,6 +10,7 @@ import SEO from "../components/SEO"
 export default () => (
   <Layout>
     <SEO title="Welcome to Just Salons" description="Just Salons demo site" />
+    <Hero banner="banner-curly-barber" />
 
     <section className="container section-spacer">
         <div className="flex flex-wrap items-center -mx-2">

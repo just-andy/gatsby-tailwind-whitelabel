@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/Layout"
 
+import Hero from "../components/modules/media/HeroImage"
+import SEO from "../components/SEO"
 import Testimonial from "../components/modules/content/Testimonial"
 import InlineProfile from "../components/modules/galleries/InlineProfile"
 
@@ -8,6 +10,9 @@ import InlineProfile from "../components/modules/galleries/InlineProfile"
 export default () => (
 
   <Layout>
+    <SEO title="About Just Salons" description="About us pages is a great page to give some background to you, your team and salon." />
+    <Hero banner="salon" />
+    <section className="container">
     <h1>About</h1>
     <p className="lead">
       There are many salons, beauticians and hairdressers in most local areas, but that doesn't mean you can't stand out. Even as the new kid on the block you can show off some in here what makes you stand out. It could be something as simple as being available later or willing to go that little further.
@@ -25,5 +30,6 @@ export default () => (
   If you have a wider team this is a good location to introduce your wider team, from reception staff through to senior stylists and therapists.
     </p>
     <p>This can be laid out in various ways; from galleries to mini profiles. What really stands out is some great headshots and testimonials, so think about the content first.</p>
+    </section>
   </Layout>
 )
