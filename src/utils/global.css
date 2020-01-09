@@ -69,6 +69,25 @@ p {
   }
 }
 
+/** Navigation **/
+.navLinks {
+  height: 0;
+  overflow: hidden;
+}
+
+@screen lg {
+  .navLinks {
+    height: auto;
+  }
+}
+
+.showNav {
+  height: 220px;
+}
+
+
+/** Show **/
+
 .btn-primary {
   @apply bg-primary-500 text-white;
 }

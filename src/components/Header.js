@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Navigation from "./modules/navigation/Navigation"
 
 const Header = () => {
-  const [isOpen, setNav] = useState()
+  const [isOpen, setNav] = useState(false)
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
@@ -22,7 +22,7 @@ const Header = () => {
           </button>
         </div>
     
-        <div className={ isOpen ? `hidden` : `block`}>
+        <div className={ isOpen ? `navLinks showNav` : `navLinks`}>
           <Navigation />
         </div>
       </div>

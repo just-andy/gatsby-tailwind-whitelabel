@@ -33,9 +33,8 @@ JSON files in the Data folder can be edited to update content on the pages
 
 ### Gatsby
 - [ ] Add sitemap plugin
-- [ ] Add Gatsby background image plugin for hero
 - [ ] Add google maps plugin
-- [ ] Add Gatsby Image
+- [ ] Get Hero Image Working
 - [ ] Try PostCSS to clean up css
 
 ### Pages/Content/Modules/Design
