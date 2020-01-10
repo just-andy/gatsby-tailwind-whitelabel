@@ -9,20 +9,27 @@ const Header = () => {
     setNav(isOpen => !isOpen)
   }
 
-  console.log(isOpen);
-
+  console.log(isOpen)
 
   return (
     <div className="container mx-auto py-4">
       <div className="lg:flex lg:justify-between">
         <div className="flex justify-between">
-          <Link to="/"><span className="text-3xl font-bold">Just Salons</span></Link>
-          <button type="button" className="btn btn-primary my-1 lg:hidden" onClick={toggleNav}>
-             Menu
+          <Link to="/">
+            <span className="text-3xl font-bold">Just Salons</span>
+          </Link>
+          <button
+            type="button"
+            className="btn btn-primary my-1 lg:hidden"
+            onClick={toggleNav}
+          >
+            Menu
           </button>
         </div>
-    
-        <div className={ isOpen ? `navLinks showNav` : `navLinks`}>
+
+        <div
+          className={isOpen ? `block sm:block transition` : `hidden sm:block`}
+        >
           <Navigation />
         </div>
       </div>

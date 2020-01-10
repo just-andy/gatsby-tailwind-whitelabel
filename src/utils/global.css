@@ -1,6 +1,5 @@
 @tailwind base;
 
-
 h1,
 h2,
 h3,
@@ -50,7 +49,7 @@ p {
   @apply w-8/12;
 }
 
-@screen lg{
+@screen lg {
   .container {
     @apply px-2;
   }
@@ -63,7 +62,7 @@ p {
   @apply inline-block py-3 px-6 mt-4 rounded shadow leading-none;
 }
 
-@screen lg{
+@screen lg {
   .btn {
     @apply mt-0;
   }
@@ -85,17 +84,15 @@ p {
   height: 220px;
 }
 
-
 /** Show **/
 
 .btn-primary {
   @apply bg-primary-500 text-white;
 }
 
-.btn-primary:hover  {
-    @apply bg-secondary-900 text-white;
+.btn-primary:hover {
+  @apply bg-secondary-900 text-white;
 }
-
 
 .btn-secondary {
   @apply bg-secondary-500 text-white;
@@ -117,6 +114,8 @@ p {
   @apply py-10;
 }
 
-
-
 @tailwind utilities;
+
+.transition {
+  transition: all 0.3s linear;
+}
