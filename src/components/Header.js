@@ -28,7 +28,7 @@ const Header = () => {
         </div>
 
         <div
-          className={isOpen ? `block md:block transition` : `hidden md:block`}
+          className={isOpen ? `block md:block` : `hidden md:block`}
         >
           <Navigation />
         </div>

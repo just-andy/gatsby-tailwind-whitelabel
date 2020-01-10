@@ -30,7 +30,7 @@ const DualCards = () => {
         <p>
           It's a great idea to call out special offers or promotions on your homepage. Whether people find the site organically or directed of social media, it is a great shop window.
         </p>
-        <Link to="book-now" className="btn btn-secondary">View Offers</Link>
+        <Link to="book-now" className="btn btn-hollow">View Offers</Link>
 
       </DualCardLeft>
       <DualCardRight>
@@ -39,7 +39,7 @@ const DualCards = () => {
         <p>
           Call out your key services or a page you want to direct people to in this section. Icons and images can be added on top to draw the users eye.
         </p>
-        <Link to="/about" className="btn btn-secondary">More Info</Link>
+        <Link to="/about" className="btn btn-hollow">More Info</Link>
       </DualCardRight>
     </DualCardsWrapper>
 
