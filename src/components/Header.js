@@ -13,14 +13,14 @@ const Header = () => {
 
   return (
     <div className="container mx-auto py-4">
-      <div className="lg:flex lg:justify-between">
+      <div className="md:flex md:justify-between">
         <div className="flex justify-between">
           <Link to="/">
             <span className="text-3xl font-bold">Just Salons</span>
           </Link>
           <button
             type="button"
-            className="btn btn-primary my-1 lg:hidden"
+            className="btn btn-primary my-1 md:hidden"
             onClick={toggleNav}
           >
             Menu
@@ -28,7 +28,7 @@ const Header = () => {
         </div>
 
         <div
-          className={isOpen ? `block sm:block transition` : `hidden sm:block`}
+          className={isOpen ? `block md:block transition` : `hidden md:block`}
         >
           <Navigation />
         </div>
