@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import Hero from "../components/modules/media/HeroImage"
 import SEO from "../components/SEO"
 import Testimonial from "../components/modules/content/Testimonial"
-import InlineProfile from "../components/modules/galleries/InlineProfile"
+import InlineProfile from "../components/modules/content/InlineProfile"
 
 
 export default () => (

@@ -10,7 +10,7 @@ module.exports = {
     title: "Just Salons Demo",
     titleTemplate: "%s · Just Salons Demo",
     description: "Demo of Just Salons site.",
-    url: "https://www.doe.com", // No trailing slash allowed!
+    siteUrl: "https://www.doe.com", // No trailing slash allowed!
     image: "/images/banner.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@justandydesign1",
   },

@@ -34,7 +34,7 @@ query gallery {
       node {
         childImageSharp {
          fluid(maxWidth: 1080) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
           id
         }

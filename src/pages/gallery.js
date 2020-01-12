@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-import SimpleGallery from "../components/modules/galleries/SimpleGridGallery"
+import SimpleGallery from "../components/modules/galleries//SimpleGridGallery"
 
 export default () => (
   <Layout>
@@ -12,7 +12,7 @@ export default () => (
     <p className="lead">
       Showcase your cuts, nails, tan, product range or basically whatever you want in here.
     </p>
-    <p>To make it easy we have used the same sizes as Instagram, so filter away and then add them toy our gallery.</p>
+    <p>To make it easy we have used the same dimensions as Instagram, so pick your best picks and just add them awa to your gallery.</p>
 
     <SimpleGallery />
     </section>
