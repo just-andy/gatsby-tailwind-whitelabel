@@ -38,5 +38,14 @@ module.exports = {
         postCssPlugins: [require("autoprefixer")],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Quicksand`,
+        ],
+        display: 'swap'
+      }
+    }
   ],
 }

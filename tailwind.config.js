@@ -3,6 +3,10 @@ const { colors } = require("tailwindcss/defaultTheme")
 
 module.exports = {
   theme: {
+    fontFamily: {
+      display: ['Anton', 'sans-serif'],
+      body: ['Anton', 'sans-serif'],
+    },
     container: {
       center: true,
       padding: '1rem',
