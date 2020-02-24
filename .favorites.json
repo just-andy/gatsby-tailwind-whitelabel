@@ -1,0 +1,26 @@
+[
+    {
+        "type": "File",
+        "name": "/Users/andyc/Documents/GitHub/gatsby-tailwind-playarea/src/utils/global.css",
+        "parent_id": null,
+        "workspaceRoot": "/Users/andyc/Documents/GitHub/gatsby-tailwind-playarea",
+        "workspacePath": "src/utils/global.css",
+        "id": "di8B9vXxcApuzF62"
+    },
+    {
+        "type": "File",
+        "name": "/Users/andyc/Documents/GitHub/gatsby-tailwind-playarea/tailwind.config.js",
+        "parent_id": null,
+        "workspaceRoot": "/Users/andyc/Documents/GitHub/gatsby-tailwind-playarea",
+        "workspacePath": "tailwind.config.js",
+        "id": "YaRFrU0s5pbwEINC"
+    },
+    {
+        "type": "File",
+        "name": "/Users/andyc/Documents/GitHub/gatsby-tailwind-playarea/gatsby-config.js",
+        "parent_id": null,
+        "workspaceRoot": "/Users/andyc/Documents/GitHub/gatsby-tailwind-playarea",
+        "workspacePath": "gatsby-config.js",
+        "id": "nW7YqXwBNp85u9yr"
+    }
+]

@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-import Hero from "../components/modules/media/HeroImage"
+import Hero from "../components/modules/media/HeroBanner"
 import SEO from "../components/SEO"
 import Testimonial from "../components/modules/content/Testimonial"
 import InlineProfile from "../components/modules/content/InlineProfile"
@@ -11,8 +11,9 @@ export default () => (
 
   <Layout>
     <SEO title="About Just Salons" description="About us pages is a great page to give some background to you, your team and salon." />
-    <Hero banner="salon" />
-    <section className="container">
+    <Hero alt="group in hair salon" filename="salon.jpg" title="Book an appointment with one team today" label="Book Now" link="/contact"/>
+
+    <section className="container md:w-9/12 lg:w-8/12">
     <h1>About</h1>
     <p className="lead">
       There are many salons, beauticians and hairdressers in most local areas, but that doesn't mean you can't stand out. Even as the new kid on the block you can show off some in here what makes you stand out. It could be something as simple as being available later or willing to go that little further.

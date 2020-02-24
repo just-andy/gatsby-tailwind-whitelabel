@@ -29,7 +29,7 @@ JSON files in the Data folder can be edited to update content on the pages
 - [ ] Make the lightbox for the gallery
 - [ ] Tidy up colours to use less colours
 - [ ] Make the spacer margins consistent
-- [ ] Fix the repsonsive navigation
+- [ x ] Fix the repsonsive navigation
 
 ### Gatsby
 - [ ] Add sitemap plugin

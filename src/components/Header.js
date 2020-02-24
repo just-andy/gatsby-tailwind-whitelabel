@@ -16,7 +16,7 @@ const Header = () => {
       <div className="md:flex md:justify-between">
         <div className="flex justify-between">
           <Link to="/">
-            <span className="text-3xl font-bold">Just Salons</span>
+            <span className="text-3xl font-bold md:py-4">Just Salons</span>
           </Link>
           <button
             type="button"

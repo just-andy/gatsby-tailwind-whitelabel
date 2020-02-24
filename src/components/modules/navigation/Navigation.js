@@ -5,14 +5,14 @@ import Pages from "../../../data/navigation"
 
 const Navigation = () => {
   return (
-    <ul className="md:flex md:flex-grow md:items-center w-full md:w-auto">
+    <ul className="md:flex md:flex-grow md:items-center w-full md:w-auto py-1">
       {Pages.map((page, index) => {
         return (
-          <li key={index} className="py-1">
+          <li key={index}>
             <Link
               to={page.url}
               activeClassName="active"
-              className="block md:inline-block mt-4 md:mt-0 mr-6"
+              className="block mt-4 mr-6 md:mt-0  md:inline-block"
             >
               {page.name}
             </Link>
@@ -25,7 +25,7 @@ const Navigation = () => {
           className="btn btn-primary"
           activeClassName="btn-primary-active"
         >
-          Book Now
+          Book
         </Link>
       </li>
     </ul>

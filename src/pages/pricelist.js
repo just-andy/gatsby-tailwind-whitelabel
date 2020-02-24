@@ -1,5 +1,5 @@
 import React from "react"
-import Hero from "../components/modules/media/HeroImage"
+import Hero from "../components/modules/media/HeroBanner"
 import Layout from "../components/Layout"
 import Pricelist from "../components/modules/SimplePricelist"
 import SEO from "../components/SEO"
@@ -8,7 +8,7 @@ export default () => (
   <Layout>
     <SEO title="Pricelist" description="Just salon offers a range of pricelist templates to suit your business" />
     
-    <Hero banner="eyebrow-threading" />
+    <Hero alt="Male Barber" filename="banner-curly-barber.jpg" title="Get an appointment to suit you with out online system" label="Book Now" link="/contact"/>
     <section className="container">
       <h1>Pricelist</h1>
       <p className="lead">
