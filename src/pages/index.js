@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Hero from "../components/modules/media/HeroBanner"
+import Hero from "../components/modules/media/HeroBannerBck"
 import {DualCardsContent, DualCardItem } from "../components/modules/general/DualCards"
 import LogoGallery from "../components/modules/galleries/LogoGallery"
 import Testimonial from "../components/modules/content/Testimonial"
@@ -11,7 +11,7 @@ import SEO from "../components/SEO"
 export default () => (
   <Layout>
     <SEO title="Welcome to Just Salons" description="Just Salons demo site" />
-    <Hero alt="Eye brow threading" filename="eyebrow-threading.jpg" title="Book an appointment with one of our stylists online" label="Book Now" link="/contact"/>
+    <Hero alt="Eye brow threading" filename="eyebrow-threading" title="Book an appointment with one of our stylists online" label="Book Now" link="/contact"/>
 
     <section className="container section-spacer">
         <div className="flex flex-wrap items-center -mx-2">

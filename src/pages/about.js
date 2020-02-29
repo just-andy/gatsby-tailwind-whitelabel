@@ -11,7 +11,7 @@ export default () => (
 
   <Layout>
     <SEO title="About Just Salons" description="About us pages is a great page to give some background to you, your team and salon." />
-    <Hero alt="group in hair salon" filename="salon.jpg" title="Book an appointment with one team today" label="Book Now" link="/contact"/>
+    <Hero alt="group in hair salon" filename="salon" title="Book an appointment with one team today" label="Book Now" link="/contact"/>
 
     <section className="container md:w-9/12 lg:w-8/12">
     <h1>About</h1>

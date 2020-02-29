@@ -8,7 +8,7 @@ export default () => (
   <Layout>
     <SEO title="Pricelist" description="Just salon offers a range of pricelist templates to suit your business" />
     
-    <Hero alt="Male Barber" filename="banner-curly-barber.jpg" title="Get an appointment to suit you with out online system" label="Book Now" link="/contact"/>
+    <Hero alt="Male Barber" filename="banner-curly-barber" title="Get an appointment to suit you with out online system" label="Book Now" link="/contact"/>
     <section className="container">
       <h1>Pricelist</h1>
       <p className="lead">

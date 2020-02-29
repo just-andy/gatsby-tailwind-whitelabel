@@ -3,6 +3,12 @@ const { colors } = require("tailwindcss/defaultTheme")
 
 module.exports = {
   theme: {
+    extend: {
+      spacing: {
+        '72': "18em",
+        '80': "20em"
+      }
+    },
     fontFamily: {
       display: ['Anton', 'sans-serif'],
       body: ['Anton', 'sans-serif'],
