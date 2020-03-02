@@ -41,6 +41,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-googlemaps-static`,
+      options: {
+          key: ` AIzaSyC61Q94Nqr09m--A61D0hZ_BgHnP1YJdvM`,
+          center: `41.8781,-87.6298 || Edinburgh,West Lothian`,
+      }
+    },
+    {
       resolve: `gatsby-theme-tailwindcss`,
       options: {
         postCssPlugins: [require("autoprefixer")],

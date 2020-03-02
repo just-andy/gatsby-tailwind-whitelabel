@@ -21,22 +21,20 @@ const HeroBannerBck = props => {
 
 
     return (
-      <div className="block">
         <BackgroundImage
           Tag="section"
           fluid={getImagePath(banners, props.filename)}
           backgroundColor={`#040e18`}
-          className="w-full lg:h-80"
+          className="w-full h-56 lg:h-80"
         >
           
-          <div className="">
-            <div className=" mx-auto text-center w-10/12 lg:w-6/12 ">
-              <h2 className="text-xl text-white mb-2 md:text-3xl lg:text-4xl lg:mb-8">{props.title}</h2>
+          <div className="flex items-center justify-center h-56 lg:h-80">
+            <div className="text-center w-3/4 lg:w-6/12 ">
+              <h2 className="text-2xl text-white mb-2 md:text-3xl lg:text-4xl lg:mb-8">{props.title}</h2>
               <Link to={props.link} className="btn btn-primary lg:text-2xl ">{props.label}</Link>
             </div> 
           </div>
         </BackgroundImage>
-      </div>
     )
 }
 

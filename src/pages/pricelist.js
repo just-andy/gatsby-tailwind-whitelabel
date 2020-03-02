@@ -1,5 +1,5 @@
 import React from "react"
-import Hero from "../components/modules/media/HeroBanner"
+import Hero from "../components/modules/media/HeroBannerBck"
 import Layout from "../components/Layout"
 import Pricelist from "../components/modules/SimplePricelist"
 import SEO from "../components/SEO"

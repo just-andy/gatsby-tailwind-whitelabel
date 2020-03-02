@@ -1,11 +1,13 @@
 import React from 'react'
 import OpeningHours from './OpeningHours'
+import StaticMap from "./StaticMap"
+
 
 const MapInfo = () => {
     return (
         <>
         <div id="map">
-            <img alt="Map" className="thumbnail" src="https://via.placeholder.com/540x320.png?text=Google+Map" />
+            <StaticMap />
         </div>
        
        <div>

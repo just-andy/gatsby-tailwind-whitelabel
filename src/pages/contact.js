@@ -23,8 +23,11 @@ export default () => (
       <p>For any enquiries please complete for form below. We do our best to get back to you within one business day. <b>Note:</b> all fields are required.</p> 
         <Form />
       </div>
-      <div className="w-full md:w-1/2 md:ml-4"><Map /></div>
+      <div className="w-full md:w-1/2 md:ml-4">
+        <Map />
+      </div>
     </div>
     </section>
   </Layout>
 )
+
