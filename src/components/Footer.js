@@ -1,5 +1,5 @@
 import React from "react"
-import SocialLinks from "./modules/navigation/SocialIconList"
+import SocialLinks from "./modules/SocialIconList"
 
 const Footer = () => {
   return (

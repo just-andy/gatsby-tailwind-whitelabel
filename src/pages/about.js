@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-import Hero from "../components/modules/media/HeroBannerBck"
+import Hero from "../components/modules/HeroBannerBck"
 import SEO from "../components/SEO"
-import Testimonial from "../components/modules/content/Testimonial"
-import InlineProfile from "../components/modules/content/InlineProfile"
+import Testimonial from "../components/modules/Testimonial"
+import InlineProfile from "../components/modules/InlineProfile"
 
 
 export default () => (

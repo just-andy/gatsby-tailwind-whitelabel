@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Hero from "../components/modules/media/HeroBannerBck"
-import {DualCardsContent, DualCardItem } from "../components/modules/general/DualCards"
-import LogoGallery from "../components/modules/galleries/LogoGallery"
-import Testimonial from "../components/modules/content/Testimonial"
+import Hero from "../components/modules/HeroBannerBck"
+import {DualCardsContent, DualCardItem } from "../components/modules/DualCards"
+import LogoGallery from "../components/modules/LogoGallery"
+import Testimonial from "../components/modules/Testimonial"
 
 
 import SEO from "../components/SEO"
