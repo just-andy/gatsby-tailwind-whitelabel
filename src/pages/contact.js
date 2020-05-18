@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Form from "../components/modules/ContactForm"
-import Map from "../components/modules/MapInfo"
+import Form from "../components/modules/forms/ContactForm"
+import Map from "../components/modules/general/MapInfo"
 import SEO from "../components/SEO"
 
 export default () => (

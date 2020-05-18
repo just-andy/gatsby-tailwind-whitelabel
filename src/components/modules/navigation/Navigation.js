@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Pages from "../../data/navigation"
+import Pages from "../../../data/navigation"
 
 const Navigation = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import Navigation from "./modules/Navigation"
+import Navigation from "./modules/navigation/Navigation"
 
 const Header = () => {
   const [isOpen, setNav] = useState(false)

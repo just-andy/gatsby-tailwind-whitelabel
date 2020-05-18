@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-import SimpleGallery from "../components/modules/SimpleGridGallery"
+import SimpleGallery from "../components/modules/galleries//SimpleGridGallery"
 
 export default () => (
   <Layout>
