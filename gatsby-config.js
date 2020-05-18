@@ -7,7 +7,7 @@
 // gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: "Just Salons Demo",
+    title: "Just Salons Demo Site",
     titleTemplate: "%s · Just Salons Demo",
     description: "Demo of Just Salons site.",
     siteUrl: "https://www.doe.com", // No trailing slash allowed!
