@@ -1,7 +1,7 @@
 import React from "react"
-import Hero from "../components/modules/media/HeroBannerBck"
+import Hero from "../components/modules/HeroBanner"
+import Pricelist from "../components/elements/SimplePricelist"
 import Layout from "../components/Layout"
-import Pricelist from "../components/modules/SimplePricelist"
 import SEO from "../components/SEO"
 
 export default () => (

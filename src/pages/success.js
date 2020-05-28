@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import SocialIconList from "../components/modules/navigation/SocialIconList"
+import SocialIconList from "../components/modules/SocialIconList"
 import {Link} from "gatsby"
 
 export default () => (

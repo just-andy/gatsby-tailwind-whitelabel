@@ -1,6 +1,6 @@
 import React from 'react'
-import OpeningHours from './OpeningHours'
-import StaticMap from "./StaticMap"
+import OpeningHours from '../elements/OpeningHours'
+import StaticMap from "../elements/StaticMap"
 
 
 const MapInfo = () => {
@@ -11,7 +11,6 @@ const MapInfo = () => {
         </div>
        
        <div>
-          
             <div itemscope itemtype="http://schema.org/Organization">
             <h3 itemprop="name">Just Salons</h3>
             

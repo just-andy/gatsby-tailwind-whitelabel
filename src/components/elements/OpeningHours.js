@@ -1,5 +1,5 @@
 import React from "react"
-import hours from "../../../data/openinghours.js"
+import hours from "../../data/openinghours.js"
 
 const OpeningHours = () => {
     return (
