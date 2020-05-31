@@ -1,45 +1,30 @@
 import React from "react"
-import styled from "@emotion/styled"
-import tw from "tailwind.macro"
 
-const FieldWrapper = styled.div`
-  ${tw`mb-4`}
-`
-const Label = styled.label`
-  ${tw`block text-sm font-bold mb-2`}
-`
-const Input = styled.input`
-  ${tw` appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline`}
-`
-
-const Textarea = styled.textarea`
-  ${tw`appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline`}
-`
 
 
 const ContactForm = () => {
   return (
 
     <form className="mb-6">
-      <FieldWrapper>
-        <Label htmlFor="name">Your Name</Label>
-        <Input type="text" name="name" placeholder="Your name" />
-      </FieldWrapper>
-      <FieldWrapper>
-        <Label htmlFor="email">Your Email</Label>
-        <Input type="email" name="email" placeholder="Email address" />
-      </FieldWrapper>
-      <FieldWrapper>
-        <Label htmlFor="subject">Subject</Label>
-        <Input type="text" name="subject" placeholder="If we need to call you" />
-      </FieldWrapper>
-      <FieldWrapper>
-        <Label htmlFor="textarea">Message</Label>
-        <Textarea rows="6" name="textarea" />
-      </FieldWrapper>
-      <FieldWrapper>
+      <div className="mb-4">
+        <label className="block text-sm font-bold mb-2" htmlFor="name">Your Name</label>
+        <input className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" placeholder="Your name" />
+      </div>
+      <div className="mb-4">
+        <label className="block text-sm font-bold mb-2" htmlFor="email">Your Email</label>
+        <input className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="email" name="email" placeholder="Email address" />
+      </div>
+      <div className="mb-4">
+        <label className="block text-sm font-bold mb-2" htmlFor="subject">Subject</label>
+        <input className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="subject" placeholder="If we need to call you" />
+      </div>
+      <div className="mb-4">
+        <label className="block text-sm font-bold mb-2" htmlFor="textarea">Message</label>
+        <textarea className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="6" name="textarea"></textarea>
+      </div>
+      <div className="mb-4">
         <button type="submit" className="btn btn-primary">Send message</button>
-      </FieldWrapper>
+      </div>
     </form>
   )
 }

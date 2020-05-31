@@ -7,9 +7,9 @@
 // gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: "Just Salons Demo Site",
-    titleTemplate: "%s · Just Salons Demo",
-    description: "Demo of Just Salons site.",
+    title: "Whitelabel",
+    titleTemplate: "%s · Just Andy Whitelabel Demo",
+    description: "Demo of Just Andy's demo site.",
     siteUrl: "https://www.doe.com", // No trailing slash allowed!
     image: "/images/banner.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@justandydesign1",
