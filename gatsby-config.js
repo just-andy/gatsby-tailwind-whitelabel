@@ -3,6 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 // gatsby-config.js
 module.exports = {
@@ -29,7 +32,6 @@ module.exports = {
         path: `${__dirname}/src/gallery/`,
       },
     },
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
@@ -43,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-source-googlemaps-static`,
       options: {
-          key: ` AIzaSyC61Q94Nqr09m--A61D0hZ_BgHnP1YJdvM`,
+          key: process.env.GATSBY_MAPS_API,
           center: `41.8781,-87.6298 || Edinburgh,West Lothian`,
       }
     },
