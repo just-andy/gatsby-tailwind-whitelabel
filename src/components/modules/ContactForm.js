@@ -9,13 +9,12 @@ const ErrorText = ({children})=>{
 
 const ContactForm = () => {
 
-{/** Helper Function */}
+
 const encode = (data) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 }
-
 
   return (
     <Formik
@@ -25,45 +24,12 @@ const encode = (data) => {
       message: '',
       subject: ''
     }}
-    validate={values => {
-      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-      const errors = {};
-      if(!values.name) {
-        errors.name = 'Name Required'
-      }
-      if(!values.email || !emailRegex.test(values.email)) {
-        errors.email = 'Valid Email Required'
-      }
-      if(!values.subject) {
-        errors.subject = 'Subject Required'
-      }
-      if(!values.message) {
-        errors.message = 'Message Required'
-      }
-      return errors;
-    }}
-    onSubmit={
-      (values, actions) => {
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact-form", ...values })
-          console.log(body)
-        })
-        .then(() => {
-          form.innerHTML = `<div class="my-6 font-black">Almost there! Check your inbox for a confirmation e-mail.</div>`;
-          console.log("success, it worked")
-          actions.resetForm()
-        })
-        .catch(() => {
-          alert('Error');
-        })
-        .finally(() => actions.setSubmitting(false))
-      }
-    }
+    onSubmit={() => { console.log("submit!"); }}
+    validator={() => ({})}
   >
   {({ isSubmitting }) => (
     <Form className="mb-6" name="contact-form" data-netlify={true}>
+      <legend className="text-4">Enquiry Form</legend>
       <div className="mb-4">
         <label className="block text-sm font-bold mb-2" htmlFor="name">Your Name</label>
         <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="name" />
@@ -76,7 +42,7 @@ const encode = (data) => {
       </div>
       <div className="mb-4">
         <label className="block text-sm font-bold mb-2" htmlFor="subject">Subject</label>
-        <Field nput className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="subject" />
+        <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="subject" />
         <ErrorMessage component={ErrorText} name="subject" />
       </div>
       <div className="mb-4">
