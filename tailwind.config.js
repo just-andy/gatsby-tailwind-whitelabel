@@ -33,6 +33,8 @@ module.exports = {
       "accent-500": "#ED8936",
       "accent-700": "#C05621",
       "accent-900": "#7B341E",
+      "warning" : "red",
+      "success" : "green",
       black: colors.black,
       white: colors.white,
       gray: colors.gray,

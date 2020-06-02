@@ -2,11 +2,15 @@ import React from "react"
 import Layout from "../components/Layout"
 import Form from "../components/modules/ContactForm"
 import Map from "../components/modules/MapInfo"
+import Hero from '../components/modules/HeroBanner'
 import SEO from "../components/SEO"
+import OpeningHours from '../components/elements/OpeningHours'
+
 
 export default () => (
   <Layout>
     <SEO title="Contact Just Salons" description="How to contact Just salons" />
+    <Hero alt="group in hair salon" filename="salon" title="Book an appointment with one team today" label="Book Now" link="/contact"/>
 <section className="container">
     <h1>Contact</h1>
 
@@ -22,6 +26,10 @@ export default () => (
      
       <p>For any enquiries please complete for form below. We do our best to get back to you within one business day. <b>Note:</b> all fields are required.</p> 
         <Form />
+        <h3>Opening Hours</h3>
+        <ul className="flex flex-col justify-between mb-8">
+            <OpeningHours />
+        </ul>
       </div>
       <div className="w-full md:w-1/2 md:ml-4">
         <Map />

@@ -1,46 +1,93 @@
 import React from "react"
-import styled from "@emotion/styled"
-import tw from "tailwind.macro"
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 
-const FieldWrapper = styled.div`
-  ${tw`mb-4`}
-`
-const Label = styled.label`
-  ${tw`block text-sm font-bold mb-2`}
-`
-const Input = styled.input`
-  ${tw` appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline`}
-`
-
-const Textarea = styled.textarea`
-  ${tw`appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline`}
-`
-
+const ErrorText = ({children})=>{
+  return (
+    <div className="text-accent-700 text-warning">{children}</div>
+  )
+}
 
 const ContactForm = () => {
-  return (
 
-    <form className="mb-6">
-      <FieldWrapper>
-        <Label htmlFor="name">Your Name</Label>
-        <Input type="text" name="name" placeholder="Your name" />
-      </FieldWrapper>
-      <FieldWrapper>
-        <Label htmlFor="email">Your Email</Label>
-        <Input type="email" name="email" placeholder="Email address" />
-      </FieldWrapper>
-      <FieldWrapper>
-        <Label htmlFor="subject">Subject</Label>
-        <Input type="text" name="subject" placeholder="If we need to call you" />
-      </FieldWrapper>
-      <FieldWrapper>
-        <Label htmlFor="textarea">Message</Label>
-        <Textarea rows="6" name="textarea" />
-      </FieldWrapper>
-      <FieldWrapper>
-        <button type="submit" className="btn btn-primary">Send message</button>
-      </FieldWrapper>
-    </form>
+{/** Helper Function */}
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
+
+  return (
+    <Formik
+    initialValues={{
+      name: '',
+      email: '',
+      message: '',
+      subject: ''
+    }}
+    validate={values => {
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      const errors = {};
+      if(!values.name) {
+        errors.name = 'Name Required'
+      }
+      if(!values.email || !emailRegex.test(values.email)) {
+        errors.email = 'Valid Email Required'
+      }
+      if(!values.subject) {
+        errors.subject = 'Subject Required'
+      }
+      if(!values.message) {
+        errors.message = 'Message Required'
+      }
+      return errors;
+    }}
+    onSubmit={
+      (values, actions) => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact-demo", ...values })
+        })
+        .then(() => {
+          alert('Success');
+          actions.resetForm()
+        })
+        .catch(() => {
+          alert('Error');
+        })
+        .finally(() => actions.setSubmitting(false))
+      }
+    }
+  >
+  {({ isSubmitting }) => (
+    <Form className="mb-6" name="contact-form" data-netlify={true}>
+      <div className="mb-4">
+        <label className="block text-sm font-bold mb-2" htmlFor="name">Your Name</label>
+        <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="name" />
+        <ErrorMessage component={ErrorText} name="name" />
+      </div>
+      <div className="mb-4">
+        <label className="block text-sm font-bold mb-2" htmlFor="email">Your Email</label>
+        <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="email" />
+        <ErrorMessage component={ErrorText} name="email" />
+      </div>
+      <div className="mb-4">
+        <label className="block text-sm font-bold mb-2" htmlFor="subject">Subject</label>
+        <Field nput className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="subject" />
+        <ErrorMessage component={ErrorText} name="subject" />
+      </div>
+      <div className="mb-4">
+        <label className="block text-sm font-bold mb-2" htmlFor="textarea">Message</label>
+        <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" component="textarea" name="textarea" />
+        <ErrorMessage component={ErrorText} name="textarea" />
+      </div>
+      <div className="mb-4">
+        <button type="submit" disabled={isSubmitting} className="btn btn-primary">Send message</button>
+      </div>
+    </Form>
+  )}
+  </Formik>
   )
 }
 

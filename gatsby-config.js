@@ -3,13 +3,16 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 // gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: "Just Salons Demo Site",
-    titleTemplate: "%s · Just Salons Demo",
-    description: "Demo of Just Salons site.",
+    title: "Whitelabel",
+    titleTemplate: "%s · Just Andy Whitelabel Demo",
+    description: "Demo of Just Andy's demo site.",
     siteUrl: "https://www.doe.com", // No trailing slash allowed!
     image: "/images/banner.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@justandydesign1",
@@ -29,7 +32,6 @@ module.exports = {
         path: `${__dirname}/src/gallery/`,
       },
     },
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
@@ -43,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-source-googlemaps-static`,
       options: {
-          key: ` AIzaSyC61Q94Nqr09m--A61D0hZ_BgHnP1YJdvM`,
+          key: process.env.GATSBY_MAPS_API,
           center: `41.8781,-87.6298 || Edinburgh,West Lothian`,
       }
     },
