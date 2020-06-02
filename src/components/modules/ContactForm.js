@@ -61,7 +61,7 @@ const encode = (data) => {
     }
   >
   {({ isSubmitting }) => (
-    <Form className="mb-6">
+    <Form className="mb-6" name="contact-form" data-netlify={true}>
       <div className="mb-4">
         <label className="block text-sm font-bold mb-2" htmlFor="name">Your Name</label>
         <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="name" />
