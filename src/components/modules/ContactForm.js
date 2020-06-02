@@ -48,11 +48,9 @@ const encode = (data) => {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact-form", ...values })
-          console.log(body)
         })
         .then(() => {
-          form.innerHTML = `<div class="my-6 font-black">Almost there! Check your inbox for a confirmation e-mail.</div>`;
-          console.log("success, it worked")
+          alert("success")
           actions.resetForm()
         })
         .catch(() => {
