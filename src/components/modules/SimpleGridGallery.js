@@ -3,40 +3,54 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 
+
 const SimpleGridGallery = ({data}) => {
 
-  const[showLightbox, setLightbox] = useState(false);
 
-  const toggleLightbox = () => {
-    setLightbox(showLightbox => !showLightbox)
+  const [lightbox, setLightbox] = useState({
+    lightboxVisible: false,
+    selectedImage: ""
+  });
 
-    console.log(showLightbox)
-  }
+  const handleClick = (index) => setLightbox(
+    { lightboxVisible: true , selectedImage: index }, console.log(index)
+  )
+  
+const toggleLightbox = () => setLightbox(
+  {lightboxVisible: false,
+  selectedImage: ""}
+)
 
   const response = useStaticQuery(galleryQuery);
   const items = response.allFile.edges
 
 
     return (
-      <>
+    <>
     <section className="my-8 flex flex-wrap ">
-
-         {items.map(({node:item}) => (
-           <div onClick={toggleLightbox} className="w-full md:w-1/2 lg:w-1/3 p-1">
+         {items.map(({node:item}, index) => (
+           <div>
+           <a href="toggleLightbox" key={index} className="w-full md:w-1/2 lg:w-1/3 p-1">
                <Img className="thumbnail" fluid={item.childImageSharp.fluid} alt="Project Thumbnail" />
-            </div>
-         ))}
+            </a>
+            <button className="btn btn-primary" onClick={() => {handleClick(index)}}>
+              Button {index}
+            </button>
+          </div>
+          ))
+         }
     </section>
 
-    <div className={showLightbox ? `opacity-0 hidden` : `opacity-75 visible bg-overlay fixed top-0 left-0 bottom-0 right-0 bottom-0 h-full flex justify-center align-middle z-50`}>
-      <div className="bg-white  relative text-black p-4 h-40 w-40">
-        Content
-        <button type="button" onClick={toggleLightbox}>
+    <div className={lightbox.lightboxVisible ? `opacity-100 flex bg-overlay fixed top-0 left-0 bottom-0 right-0 bottom-0 h-full justify-center align-middle z-50` : `opacity-0 hidden`}>
+      <div className="bg-white max-w-screen-md dialog relative text-black p-4 ">
+        <button onClick={toggleLightbox}>
           Close
         </button>
+
+        {lightbox.selectedImage}
       </div>
     </div>
- </>
+    </>
     )
 }
 
@@ -53,6 +67,9 @@ query gallery {
             ...GatsbyImageSharpFluid
           }
           id
+          sizes {
+            src
+          }
         }
       }
     }

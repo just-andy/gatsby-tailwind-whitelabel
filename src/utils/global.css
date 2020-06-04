@@ -131,6 +131,16 @@ p {
   @apply py-10;
 }
 
+/** Dialog **/
+
+.dialog {
+position: fixed;
+top: 10vh;
+left: 10vw;
+width: 80vw;
+height: 80vw;
+}
+
 @tailwind utilities;
 
 
