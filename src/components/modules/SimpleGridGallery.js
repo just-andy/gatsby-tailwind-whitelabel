@@ -45,12 +45,12 @@ const toggleLightbox = () => setLightbox(
       <div className="bg-white">
           <div className="flex h-6 my-6 justify-between max-w-md">
             <div>{lightbox.selectedImage.originalName}</div>
-          <button onClick={toggleLightbox}>
-            Close
-          </button>
-        </div>
+            <button onClick={toggleLightbox}>
+              Close
+            </button>
+            </div>
        
-        <Img className="w-1/2" fluid={lightbox.selectedImage} alt="selected" />
+          <Img className="w-1/2" fluid={lightbox.selectedImage} alt="selected" />
       </div>
     </div>
     </>
