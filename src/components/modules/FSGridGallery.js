@@ -8,13 +8,18 @@ const FSGridGallery = ({data}) => {
 
   const [lightbox, setLightbox] = useState({
     lightboxVisible: false,
-    selectedImage: 0
+    selectedImage: ""
   });
 
 
   const handleClick = (e, image) => {
     e.preventDefault()
-    setLightbox({ lightboxVisible: true , selectedImage: image, })
+    setLightbox({ lightboxVisible: true , selectedImage: image})
+  }
+
+  const resetLightbox = () => {
+    setLightbox({ lightboxVisible: false  })
+    console.log(lightbox.lightboxVisible)
   }
 
   const response = useStaticQuery(fsgalleryQuery);
@@ -22,16 +27,15 @@ const FSGridGallery = ({data}) => {
   
   let imageUrls = items.map(({node:image}) => image.childImageSharp.fluid.src )
  
-console.log(imageUrls)
     return (
     <>
 
-<Lightbox toggler={lightbox.lightboxVisible} slide={lightbox.selectedImage} sources={imageUrls} />
+<Lightbox toggler={lightbox.lightboxVisible} slide={lightbox.selectedImage} sources={imageUrls} onClose={resetLightbox} />
   
       
       <section className="my-8 flex flex-wrap ">
           {items.map(({node:item}, index) => (
-              <a href={item.childImageSharp.fluid.src}  onClick={(e) => {handleClick(e, index)}}  >
+              <a className="w-full md:w-1/2 lg:w-1/3 p-1" href={item.childImageSharp.fluid.src}  onClick={(e) => {handleClick(e, index)}}  >
                 <Img  key={index} className="thumbnail" fluid={item.childImageSharp.fluid} alt="Project Thumbnail" />
             </a>
             ))
@@ -53,10 +57,8 @@ query fsgallery {
         childImageSharp {
          fluid(maxWidth: 1080) {
           originalName
+          src
             ...GatsbyImageSharpFluid
-          }
-          sizes {
-            src
           }
         }
       }
