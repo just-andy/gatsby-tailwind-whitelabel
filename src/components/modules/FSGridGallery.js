@@ -6,21 +6,16 @@ import Lightbox from "fslightbox-react"
 
 const FSGridGallery = ({data}) => {
 
+
   const [lightbox, setLightbox] = useState({
-    lightboxVisible: false,
-    selectedImage: ""
+    toggler: false,
+    selectedImage: 0
   });
 
-
-  const handleClick = (e, image) => {
-    e.preventDefault()
-    setLightbox({ lightboxVisible: true , selectedImage: image})
+  const handleClick = (image) => {
+    setLightbox({ toggler: !lightbox.toggler , selectedImage: image})
   }
 
-  const resetLightbox = () => {
-    setLightbox({ lightboxVisible: false  })
-    console.log(lightbox.lightboxVisible)
-  }
 
   const response = useStaticQuery(fsgalleryQuery);
   const items = response.allFile.edges
@@ -30,14 +25,14 @@ const FSGridGallery = ({data}) => {
     return (
     <>
 
-<Lightbox toggler={lightbox.lightboxVisible} slide={lightbox.selectedImage} sources={imageUrls} onClose={resetLightbox} />
+<Lightbox toggler={lightbox.toggler} slide={lightbox.selectedImage} sources={imageUrls} />
   
       
       <section className="my-8 flex flex-wrap ">
           {items.map(({node:item}, index) => (
-              <a className="w-full md:w-1/2 lg:w-1/3 p-1" href={item.childImageSharp.fluid.src}  onClick={(e) => {handleClick(e, index)}}  >
+              <button className="w-full md:w-1/2 lg:w-1/3 p-1" onClick={() => {handleClick(index)}}  >
                 <Img  key={index} className="thumbnail" fluid={item.childImageSharp.fluid} alt="Project Thumbnail" />
-            </a>
+            </button>
             ))
           }
       </section>
