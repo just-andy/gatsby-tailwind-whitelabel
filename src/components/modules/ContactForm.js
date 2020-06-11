@@ -1,11 +1,37 @@
 import React from "react"
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, useField, Form } from 'formik'
+import * as Yup from "yup";
 
-const ErrorText = ({children})=>{
+
+const CustomInputField = ({ label, ...props }) => {
+  const [field, meta] = useField(props);
   return (
-    <div className="text-accent-700 text-warning">{children}</div>
-  )
-}
+    <div className="mb-4">
+      <label className="block text-sm font-bold mb-2">
+        {label}
+        <input className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" {...field} {...props} />
+      </label>
+      {meta.touched && meta.error ? (
+        <div className="text-accent-700 text-warning">{meta.error}</div>
+      ) : null}
+    </div>
+  );
+};
+
+const CustomTextarea = ({ label, ...props }) => {
+  const [field, meta] = useField(props);
+  return (
+    <div className="mb-4">
+      <label className="block text-sm font-bold mb-2">
+        {label}
+        <textarea rows="8" className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" {...field} {...props} />
+      </label>
+      {meta.touched && meta.error ? (
+        <div className="text-accent-700 text-warning">{meta.error}</div>
+      ) : null}
+    </div>
+  );
+};
 
 const ContactForm = () => {
 
@@ -25,32 +51,32 @@ const encode = (data) => {
       message: '',
       subject: ''
     }}
-    validate={values => {
-      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-      const errors = {};
-      if(!values.name) {
-        errors.name = 'Name Required'
-      }
-      if(!values.email || !emailRegex.test(values.email)) {
-        errors.email = 'Valid Email Required'
-      }
-      if(!values.subject) {
-        errors.subject = 'Subject Required'
-      }
-      if(!values.message) {
-        errors.message = 'Message Required'
-      }
-      return errors;
-    }}
+    validationSchema={Yup.object({
+      name: Yup.string()
+        .min(3, "Must be at least 3 characters")
+        .max(15, "Must be 15 characters")
+        .required("Required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Required"),
+      subject: Yup.string()
+        .min(3, "Must be at least 3 characters")
+        .max(15, "Must be 15 characters")
+        .required("Required"),
+      message: Yup.string()
+        .min(3, "Must be at least 3 characters")
+        .max(15, "Must be 15 characters")
+        .required("Required")
+    })}
     onSubmit={
       (values, actions) => {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact-form", ...values })
+          body: encode({ "form-name": "contact", ...values })
         })
         .then(() => {
-          alert("success")
+          alert('Success');
           actions.resetForm()
         })
         .catch(() => {
@@ -60,33 +86,18 @@ const encode = (data) => {
       }
     }
   >
-  {({ isSubmitting }) => (
-    <Form className="mb-6" name="contact-form" data-netlify={true}>
-      <div className="mb-4">
-        <label className="block text-sm font-bold mb-2" htmlFor="name">Your Name</label>
-        <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="name" />
-        <ErrorMessage component={ErrorText} name="name" />
-      </div>
-      <div className="mb-4">
-        <label className="block text-sm font-bold mb-2" htmlFor="email">Your Email</label>
-        <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="email" />
-        <ErrorMessage component={ErrorText} name="email" />
-      </div>
-      <div className="mb-4">
-        <label className="block text-sm font-bold mb-2" htmlFor="subject">Subject</label>
-        <Field nput className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="subject" />
-        <ErrorMessage component={ErrorText} name="subject" />
-      </div>
-      <div className="mb-4">
-        <label className="block text-sm font-bold mb-2" htmlFor="textarea">Message</label>
-        <Field className="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" component="textarea" name="textarea" />
-        <ErrorMessage component={ErrorText} name="textarea" />
-      </div>
-      <div className="mb-4">
-        <button type="submit" disabled={isSubmitting} className="btn btn-primary">Send message</button>
-      </div>
-    </Form>
-  )}
+
+     <Form name="contact" method="post" data-netlify={true} data-netlify-honeypot="bot-field">
+     <CustomInputField name="name" type="text" label="Name" />
+     <CustomInputField name="email" type="email" label="Email" />
+     <CustomInputField name="subject" type="text" label="Subject" />
+     <CustomTextarea name="message" type="textarea" label="Message" />
+     <button type="submit" className="btn btn-primary">
+       Submit
+     </button>
+     <CustomInputField name="form-name" value="contact" type="hidden" />
+   </Form>
+  
   </Formik>
   )
 }
