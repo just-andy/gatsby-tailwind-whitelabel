@@ -35,6 +35,7 @@ module.exports = {
       "accent-900": "#7B341E",
       "warning" : "red",
       "success" : "green",
+      "overlay" : "rgba(0, 0, 0, 0.5)",
       black: colors.black,
       white: colors.white,
       gray: colors.gray,

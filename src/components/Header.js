@@ -9,8 +9,6 @@ const Header = () => {
     setNav(isOpen => !isOpen)
   }
 
-  console.log(isOpen)
-
   return (
     <div className="container mx-auto py-4">
       <div className="md:flex md:justify-between">
