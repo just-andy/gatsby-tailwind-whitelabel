@@ -1,6 +1,6 @@
 import React from "react"
 import Hero from "../components/modules/HeroBanner"
-import Pricelist from "../components/elements/SimplePricelist"
+import ResponsivePricelist from "../components/elements/ResponsivePricelist"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
@@ -19,7 +19,7 @@ export default () => (
 
   <p> This is also a great page to add offer banners and call to actions to make an appointment online, think of it as the enterance to your salon.</p>
 
-      <Pricelist />
+      <ResponsivePricelist />
     </section>
   </Layout>
 )

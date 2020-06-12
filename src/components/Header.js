@@ -21,12 +21,12 @@ const Header = () => {
             className="btn btn-primary my-1 md:hidden"
             onClick={toggleNav}
           >
-            Menu
+           {(isOpen === true) ? "Close" : "Menu"} 
           </button>
         </div>
 
         <div
-          className={isOpen ? `block md:block` : `hidden md:block`}
+          className={isOpen ? `block md:block h-auto ease-in-out	transition duration-500` : `hidden sm:h-0  md:block `}
         >
           <Navigation />
         </div>
