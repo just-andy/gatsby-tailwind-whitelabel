@@ -4,9 +4,6 @@ import tw from "tailwind.macro"
 
 import prices from "../../data/simpleprices"
 
-const Table = styled.table`
-  ${tw` mx-auto border-solid border-1 border-gray-300 w-full lg:w-10/12 lg:my-8 `}
-`
 
 const TableRow = styled.tr`
 ${tw`border-solid border-b-1 border-gray-300`}
@@ -16,31 +13,23 @@ ${tw`border-solid border-b-1 border-gray-300`}
   }
 `
 
-const TableHead = styled.thead`
-  ${tw`bg-primary-300 border-solid border-b-1 border-gray-300`}
-`
-
-const TableCell = styled.td`
-  ${tw`p-2 md:p-4`}
-`
-
 const SimplePricelist = () => {
   return (
-    <Table>
-      <TableHead>
+    <table className=" mx-auto border-solid border-1 border-gray-300 w-full lg:w-10/12 lg:my-8 ">
+      <thead className="bg-primary-300 border-solid border-b-1 border-gray-300">
         <tr>
           <th className="w-1/2 p-2 md:p-3 text-left">Treatment</th>
           <th className="w-1/4 p-2 md:p-3 text-left">Price</th>
           <th className="w-1/4 p-2 md:p-3 text-left">Time</th>
         </tr>
-      </TableHead>
+      </thead>
       <tbody>
         {prices.map((item, index) => {
           return (
             <TableRow key={index}>
-              <TableCell>{item.treatment}</TableCell>
-              <TableCell>&pound; {item.price}</TableCell>
-              <TableCell>{item.time} mins</TableCell>
+              <td className="p-2 md:p-4">{item.treatment}</td>
+              <td className="p-2 md:p-4">&pound; {item.price}</td>
+              <td className="p-2 md:p-4">{item.time} mins</td>
             </TableRow>
           )
         })}
@@ -52,7 +41,7 @@ const SimplePricelist = () => {
           </td>
         </tr>
       </tfoot>
-    </Table>
+    </table>
   )
 }
 

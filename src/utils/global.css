@@ -119,11 +119,100 @@ p {
   @apply bg-accent-500 text-white;
 }
 
-
-
 .thumbnail {
   @apply p-1 border-solid border-2 border-gray-200;
 }
+
+/** Responsive Table **/
+
+
+/* Widths
+================================== */
+.treatment-cell  { @apply w-8/12 text-left; }
+.time-cell  { @apply w-2/12 text-right; }
+.price-cell  { @apply w-2/12 text-right; }
+
+/* Apply styles
+================================== */
+.Rtable {
+  @apply flex flex-wrap p-0 text-left;
+}
+
+.Rtable-row--head > .Rtable-cell{
+    font-weight:700;
+  }
+
+.Rtable-row {
+  @apply w-full flex bg-white;
+}
+  
+.Rtable-row.is-striped {
+@apply bg-secondary-100;
+}
+    
+.title-cell {
+  @apply hidden;
+}
+
+.Rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding: 0.625em 1.25em;
+  overflow: hidden; 
+  list-style: none;
+  font-size: 1em;
+  margin-bottom:1px;
+}
+
+.Rtable-cell.column-heading {
+    @apply p-4 font-bold bg-secondary-700 text-white;
+  }
+  
+  .Rtable-cell--heading {
+    @apply hidden;
+  }
+
+
+/* Responsive
+==================================== */
+@media all and (max-width: 640px) {
+
+  .Rtable--collapse  {
+    @apply block w-full rounded;
+  }
+
+  .Rtable-row {
+    @apply flex-wrap flex w-full mb-5;
+  }
+
+  .Rtable-row.Rtable-row--head {
+    @apply hidden;
+  }
+
+  .Rtable-cell {
+    @apply align-middle flex w-full;
+  }
+
+  .Rtable-cell.title-cell {
+    @apply text-left w-full font-black;
+  }
+
+  .Rtable-cell.title-content {
+    @apply flex py-2 justify-between;
+  }
+
+  .Rtable-cell--heading {
+    max-width: 120px;
+    min-width: 120px;
+    @apply inline-block flex mr-8 font-bold;
+  }
+
+  .Rtable-cell--content {
+    @apply flex;
+  }
+  
+}
+
 
 /** Utilities **/
 

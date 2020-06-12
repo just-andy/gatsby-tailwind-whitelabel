@@ -76,7 +76,6 @@ const encode = (data) => {
           body: encode({ "form-name": "contact", ...values })
         })
         .then(() => {
-          alert('Success');
           actions.resetForm()
         })
         .catch(() => {
@@ -87,7 +86,7 @@ const encode = (data) => {
     }
   >
 
-     <Form name="contact" method="post" data-netlify={true} data-netlify-honeypot="bot-field">
+     <Form name="contact" method="post" action="/success" data-netlify={true} data-netlify-honeypot="bot-field">
      <CustomInputField name="name" type="text" label="Name" />
      <CustomInputField name="email" type="email" label="Email" />
      <CustomInputField name="subject" type="text" label="Subject" />
