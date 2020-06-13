@@ -54,18 +54,17 @@ const encode = (data) => {
     validationSchema={Yup.object({
       name: Yup.string()
         .min(3, "Must be at least 3 characters")
-        .max(15, "Must be 15 characters")
+        .max(15, "Max 15 characters")
         .required("Required"),
       email: Yup.string()
         .email("Invalid email address")
         .required("Required"),
       subject: Yup.string()
         .min(3, "Must be at least 3 characters")
-        .max(15, "Must be 15 characters")
+        .max(100, "Max 100 characters")
         .required("Required"),
       message: Yup.string()
-        .min(3, "Must be at least 3 characters")
-        .max(15, "Must be 15 characters")
+        .min(5, "Must be at least 5 characters")
         .required("Required")
     })}
     onSubmit={
@@ -86,7 +85,7 @@ const encode = (data) => {
     }
   >
 
-     <Form name="contact" method="post" action="/success" data-netlify={true} data-netlify-honeypot="bot-field">
+     <Form name="contact" method="POST" action="/success" data-netlify={true} data-netlify-honeypot="bot-field">
      <CustomInputField name="name" type="text" label="Name" />
      <CustomInputField name="email" type="email" label="Email" />
      <CustomInputField name="subject" type="text" label="Subject" />
@@ -94,7 +93,7 @@ const encode = (data) => {
      <button type="submit" className="btn btn-primary">
        Submit
      </button>
-     <CustomInputField name="form-name" value="contact" type="hidden" />
+     <input type="hidden" name="form-name" value="contact" />
    </Form>
   
   </Formik>
