@@ -11,6 +11,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Whitelabel",
+    address: "12 Acme Street, Edinburgh, EH123 123",
+    telephone: "0131 123 456",
+    email: "salon@justsalons.co.uk",
     titleTemplate: "%s · Just Andy Whitelabel Demo",
     description: "Demo of Just Andy's demo site.",
     siteUrl: "https://www.doe.com", // No trailing slash allowed!

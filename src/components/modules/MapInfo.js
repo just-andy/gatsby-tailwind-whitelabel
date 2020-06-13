@@ -1,8 +1,18 @@
 import React from 'react'
+import {graphql, useStaticQuery} from 'gatsby'
 import StaticMap from "../elements/StaticMap"
 
 
-const MapInfo = () => {
+
+const MapInfo = ({data}) => {
+
+    const response = useStaticQuery(SiteMapData)
+    const info = response.site.siteMetadata
+  
+    const stripEmail = (email) => {
+        return email.replace("@", "{at}")
+    }
+
     return (
         <>
         <div id="map">
@@ -15,12 +25,10 @@ const MapInfo = () => {
             
             <address className="py-2 not-italic" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 
-                <span itemprop="streetAddress">12 Acme Street,</span>
-                <span itemprop="postalCode">EH11 1AB, </span>
-                <span itemprop="addressLocality">Edinburgh, Scotland</span>
+               {info.address}
 
             </address>
-           <span itemprop="telephone">0131 123 4567 </span>&nbsp;&middot;&nbsp;<span itemprop="email">demo(at)just-salons.co.uk</span>
+           <span itemprop="telephone">{info.telephone} </span>&nbsp;&middot;&nbsp;<span itemprop="email">{stripEmail(info.email)}</span>
             </div>
         </div>
         </>
@@ -29,3 +37,15 @@ const MapInfo = () => {
 
 
 export default MapInfo
+
+const SiteMapData = graphql`
+query siteMapMeta {
+  site {
+    siteMetadata {
+      title
+      telephone
+      address
+    }
+  }
+}
+`;
