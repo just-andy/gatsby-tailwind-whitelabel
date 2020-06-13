@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 
 import Hero from "../components/modules/HeroBanner"
 import SEO from "../components/SEO"
+
 import Testimonial from "../components/elements/Testimonial"
 
 
@@ -17,9 +18,13 @@ export default () => (
     <p className="lead">
       There are many salons, beauticians and hairdressers in most local areas, but that doesn't mean you can't stand out. Even as the new kid on the block you can show off some in here what makes you stand out. It could be something as simple as being available later or willing to go that little further.
     </p>
-    <div className="w-9/12 my-8 mx-auto">
-      <Testimonial quote="Quotes can be dropped into page to give context or supporting content to why you and your salon is so great" cite="Andy, West Lothian" />
-    </div>
+
+      <blockquote>
+        If you do a good job then clients will say even more good things about you and you can put them around the site.
+        <cite>Jane, Glasgow</cite>
+      </blockquote>
+
+
       <p> Just like the pricelist this page can use different things from testimonials, images, banners and a few call out sections to really draw potential customers eyes to the key facts. If you have specific awards, qualifications or brands you work with we can add logos to the site too, lets face it no one is on here to read a book.
     </p> 
 
@@ -30,5 +35,8 @@ export default () => (
     </p>
     <p>This can be laid out in various ways; from galleries to mini profiles. What really stands out is some great headshots and testimonials, so think about the content first.</p>
     </section>
+
+    <Testimonial quote="This salon is really good and made me look a million $$$, definately be back." cite="Amy, Stirling" />
+
   </Layout>
 )
