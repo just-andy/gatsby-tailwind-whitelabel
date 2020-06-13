@@ -44,6 +44,21 @@ p {
   @apply mb-4;
 }
 
+blockquote {
+  @apply mt-8 mb-10 mx-auto border-l-4 pl-4 border-secondary-700 text-2xl mb-4 text-gray-700 w-full ;
+}
+
+
+@screen lg {
+  blockquote {
+   @apply mt-10 mb-12 w-9/12 text-3xl;
+  }
+}
+
+cite {
+  @apply block text-lg text-secondary-700 font-normal;
+}
+
 .lead {
   @apply text-xl;
 }

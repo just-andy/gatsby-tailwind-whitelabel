@@ -1,6 +1,8 @@
 import React from "react"
 import { Formik, useField, Form } from 'formik'
+import {navigate} from "gatsby"
 import * as Yup from "yup";
+
 
 
 const CustomInputField = ({ label, ...props }) => {
@@ -49,7 +51,9 @@ const encode = (data) => {
       name: '',
       email: '',
       message: '',
-      subject: ''
+      subject: '',
+      'form-name' : 'contact',
+      'bot-field' : ''
     }}
     validationSchema={Yup.object({
       name: Yup.string()
@@ -67,25 +71,26 @@ const encode = (data) => {
         .min(5, "Must be at least 5 characters")
         .required("Required")
     })}
-    onSubmit={
-      (values, actions) => {
+    onSubmit={(values, actions) => {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...values })
         })
         .then(() => {
+          navigate("/success")
           actions.resetForm()
         })
         .catch(() => {
-          alert('Error');
+         alert("There was a problem")
         })
         .finally(() => actions.setSubmitting(false))
       }
     }
-  >
-
-     <Form name="contact" method="POST" action="/success" data-netlify={true} data-netlify-honeypot="bot-field">
+>
+     <Form name="contact" method="POST" data-netlify={true} data-netlify-honeypot="bot-field">
+     <label className="hidden" htmlFor="form-name">Form name</label>
+     <input type="hidden" name="form-name" value="contact" />
      <CustomInputField name="name" type="text" label="Name" />
      <CustomInputField name="email" type="email" label="Email" />
      <CustomInputField name="subject" type="text" label="Subject" />
@@ -93,10 +98,9 @@ const encode = (data) => {
      <button type="submit" className="btn btn-primary">
        Submit
      </button>
-     <input type="hidden" name="form-name" value="contact" />
    </Form>
-  
-  </Formik>
+
+</Formik>
   )
 }
 

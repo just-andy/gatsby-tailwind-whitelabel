@@ -3,7 +3,6 @@ import Layout from "../components/Layout"
 import Hero from "../components/modules/HeroBanner"
 import {DualCardsContent, DualCardItem } from "../components/modules/DualCards"
 import LogoGallery from "../components/modules/LogoGallery"
-import Testimonial from "../components/elements/Testimonial"
 
 
 import SEO from "../components/SEO"
@@ -21,9 +20,10 @@ export default () => (
                 <p>This is just one example of how the page can look. We are working on a range of templates to pick on for each page type.</p>
             </div>
             <div className="lg:w-3/5 px-2 mb-6">
-                <div className="w-9/12 mx-auto lg:w-full">
-                <Testimonial quote="This is where you can let customers know what great things other clients have said about you." cite="Andy, Edinburgh" />
-                </div>
+                <blockquote>
+                This is where you can let customers know what great things other clients have said about you.
+                <cite>Andy, Edinburgh</cite>
+                </blockquote>
             </div>
         </div>
     </section>
