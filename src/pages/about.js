@@ -5,6 +5,7 @@ import Hero from "../components/modules/HeroBanner"
 import SEO from "../components/SEO"
 
 import Testimonial from "../components/elements/Testimonial"
+import HalfImage from "../components/elements/HalfImage"
 
 
 export default () => (
@@ -34,9 +35,26 @@ export default () => (
   If you have a wider team this is a good location to introduce your wider team, from reception staff through to senior stylists and therapists.
     </p>
     <p>This can be laid out in various ways; from galleries to mini profiles. What really stands out is some great headshots and testimonials, so think about the content first.</p>
-    </section>
+   
+   
+   <div className="py-12 md:flex">
+     <div className="w-full md:w-5/12 lg:w-1/2">
+      <HalfImage filename="makeupkit" alt="Artist toolbag" />
+     </div>
+     <div className="w-full md:px-8 md:w-7/12 lg:w-1/2 lg:px-8">
+      <h2>What makes us special</h2>
+      <p>These are just some things that make our services unique</p>
+      <ul >
+        <li>Qualified people that have trained to do things properly</li>
+        <li>Our place is really clean and tidy</li>
+      </ul>
+      </div>
+   </div>
+   
+   </section>
 
     <Testimonial quote="This salon is really good and made me look a million $$$, definately be back." cite="Amy, Stirling" />
+
 
   </Layout>
 )

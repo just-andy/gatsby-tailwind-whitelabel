@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <div className="container mx-auto py-4 shadow-md">
+    <div className="container mx-auto py-4 shadow-md md:shadow-none">
       <div className="md:flex md:justify-between">
         <div className="flex justify-between ">
           <Link to="/">
