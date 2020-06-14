@@ -10,9 +10,9 @@ const Header = () => {
   }
 
   return (
-    <div className="container mx-auto py-4">
+    <div className="container mx-auto py-4 shadow-md">
       <div className="md:flex md:justify-between">
-        <div className="flex justify-between">
+        <div className="flex justify-between ">
           <Link to="/">
             <span className="text-3xl font-bold md:py-4">Just Salons</span>
           </Link>

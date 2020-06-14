@@ -2,7 +2,7 @@ import React from "react"
 import SocialLinks from "./modules/SocialIconList"
 
 
-const Footer = ({data}) => {
+const Footer = () => {
 
 
 
@@ -19,14 +19,3 @@ const Footer = ({data}) => {
 }
 
 export default Footer
-
-const SiteData = graphql`
-query siteMeta {
-  site {
-    siteMetadata {
-      title
-      telephone
-    }
-  }
-}
-`;

@@ -12,17 +12,17 @@ const Navigation = () => {
             <Link
               to={page.url}
               activeClassName="active"
-              className="block md:mr-4 md:mt-0  md:inline-block lg:mr-6"
+              className="block py-4 text-lg border-solid border-b-2 border-gray-200 md:border-none md:text-base md:my-0 md:mr-4 md:mt-0  md:inline-block lg:mr-6"
             >
               {page.name}
             </Link>
           </li>
         )
       })}
-      <li>
+      <li className="py-4 md:py-0">
         <Link
           to="/book-now"
-          className="btn btn-primary mt-0"
+          className="btn btn-primary  mt-0"
           activeClassName="btn-primary-active"
         >
           Book
