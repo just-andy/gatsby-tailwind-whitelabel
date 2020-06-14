@@ -228,6 +228,12 @@ cite {
   
 }
 
+/** Zoom hack **/
+input[type='text'],
+input[type='email'],
+textarea {
+  font-size: 16px;
+}
 
 /** Utilities **/
 
