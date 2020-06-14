@@ -49,7 +49,7 @@ module.exports = {
       resolve: `gatsby-source-googlemaps-static`,
       options: {
           key: process.env.GATSBY_MAPS_API,
-          center: `41.8781,-87.6298 || Edinburgh,West Lothian`,
+          center: `41.8781,-87.6298`,
       }
     },
     {
