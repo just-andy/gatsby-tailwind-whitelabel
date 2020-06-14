@@ -14,13 +14,13 @@ const LogoGallery = ({data}) => {
 
     return (
     <section className="section-spacer">
-        <h2 className="text-center mb-6 font-heading"> Brands We Use</h2>
-        <div className="flex flex-wrap -mx-8">
+        <h2 className="text-center font-heading"> Brands We Use</h2>
+        <div className="flex flex-wrap">
 
             {logos.map(({node:item}) => (
                 
-                    <div key={item.id} className="w-1/3 md:w-1/6 px-8 mb-4 md:mb-0">
-                        <img src={item.publicURL} alt={formatName(item.relativePath)+" logo"}/>
+                    <div key={item.id} className="w-1/2 md:w-1/6 mb-4 md:mb-0">
+                        <img className="p-4" src={item.publicURL} alt={formatName(item.relativePath)+" logo"}/>
                     </div>
             ))}
 

@@ -4,7 +4,7 @@ import prices from "../../data/simpleprices"
 
 const ResponsivePricelist = () => {
     return (
-    <div className="Rtable Rtable--collapse">
+    <div className="Rtable Rtable--collapse my-12">
         {/** Header **/}
          <div className="Rtable-row Rtable-row--head">
           <div className="Rtable-cell treatment-cell column-heading">Treatment</div>
