@@ -4,14 +4,9 @@ import StaticMap from "../elements/StaticMap"
 
 
 
-const MapInfo = ({data}) => {
+const MapInfo = () => {
 
-    const response = useStaticQuery(SiteMapData)
-    const info = response.site.siteMetadata
-  
-    const stripEmail = (email) => {
-        return email.replace("@", "{at}")
-    }
+ 
 
     return (
         <>
@@ -25,10 +20,12 @@ const MapInfo = ({data}) => {
             
             <address className="py-2 not-italic" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 
-               {info.address}
+            <span itemprop="streetAddress">12 Acme Street,</span>
+                <span itemprop="postalCode">EH11 1AB, </span>
+                <span itemprop="addressLocality">Edinburgh, Scotland</span>
 
             </address>
-           <span itemprop="telephone">{info.telephone} </span>&nbsp;&middot;&nbsp;<span itemprop="email">{stripEmail(info.email)}</span>
+           <span itemprop="telephone">0131 123 4567 </span>&nbsp;&middot;&nbsp;<span itemprop="email">this is an email</span>
             </div>
         </div>
         </>
@@ -37,15 +34,3 @@ const MapInfo = ({data}) => {
 
 
 export default MapInfo
-
-const SiteMapData = graphql`
-query siteMapMeta {
-  site {
-    siteMetadata {
-      title
-      telephone
-      address
-    }
-  }
-}
-`;

@@ -1,25 +1,12 @@
 import React from 'react'
-import {graphql, useStaticQuery} from "gatsby"
-import Img from "gatsby-image"
 
 const StaticMap = () => {
-  
-const data = useStaticQuery(graphql`
-query StaticMapQuery {
-    staticMap {
-        childFile {
-            childImageSharp {
-                fluid(maxWidth: 1080) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-}`)
-return (
-  <Img fluid={data.staticMap.childFile.childImageSharp.fluid} />
-)
+  return(
+    <div className="flex justify-center align-middle bg-gray-400 h-80 w-auto">
+    <p>Map</p>
+</div>
 
+  )
 }
 
 export default StaticMap
