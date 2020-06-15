@@ -38,6 +38,19 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Just Salons Demo`,
+        short_name: `JS Demo`,
+        start_url: `/`,
+        background_color: `#48BB78`,
+        theme_color: `#48BB78`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
     {
       resolve: 'gatsby-background-image-es5',
       options: {
