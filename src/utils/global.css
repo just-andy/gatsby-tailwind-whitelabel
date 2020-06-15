@@ -48,6 +48,10 @@ blockquote {
   @apply mt-8 mb-10 mx-auto border-l-4 pl-4 border-secondary-700 text-2xl mb-4 text-gray-700 w-full ;
 }
 
+li {
+  list-style: circle;
+  @apply ml-4 mb-4;
+}
 
 @screen lg {
   blockquote {
