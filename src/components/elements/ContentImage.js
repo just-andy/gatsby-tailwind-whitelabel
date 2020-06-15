@@ -2,9 +2,9 @@ import React from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
 
-const HalfImage = props => {
+const ContentImage = props => {
 
-    const imagesResponse = useStaticQuery(ImageQuery)
+    const imagesResponse = useStaticQuery(ContentImageQuery)
     const images = imagesResponse.allFile.edges
 
     
@@ -23,10 +23,10 @@ const HalfImage = props => {
     )
 }
 
-export default HalfImage
+export default ContentImage
 
-const ImageQuery = graphql`
-query Images {
+const ContentImageQuery = graphql`
+query ContentImages {
     allFile(filter: {relativeDirectory: {eq: "content"}}) {
       edges {
         node {

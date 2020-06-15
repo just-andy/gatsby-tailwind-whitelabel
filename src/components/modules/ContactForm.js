@@ -89,8 +89,9 @@ const encode = (data) => {
     }
 >
      <Form name="contact" method="POST" data-netlify={true} data-netlify-honeypot="bot-field">
-     <label className="invisible" htmlFor="form-name">Form name</label>
+     <label className="invisible" htmlFor="form-name">
      <input type="hidden" name="form-name" value="contact" />
+     </label>
      <CustomInputField name="name" type="text" label="Name" />
      <CustomInputField name="email" type="email" label="Email" />
      <CustomInputField name="subject" type="text" label="Subject" />
