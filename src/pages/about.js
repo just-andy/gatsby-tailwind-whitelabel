@@ -42,7 +42,7 @@ export default () => (
           <HalfContent order="order-first">
           <h2>What makes us special</h2>
             <p>These are just some things that make our services unique</p>
-            <ul >
+            <ul className="list list-disc" >
               <li>Qualified people that have trained to do things properly</li>
               <li>Our place is really clean and tidy</li>
             </ul>
@@ -54,7 +54,7 @@ export default () => (
           <HalfContent order="order-last">
           <h2>What makes us special</h2>
             <p>These are just some things that make our services unique</p>
-            <ul >
+            <ul className="list list-disc" >
               <li>Qualified people that have trained to do things properly</li>
               <li>Our place is really clean and tidy</li>
             </ul>
