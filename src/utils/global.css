@@ -35,13 +35,8 @@ a:hover {
   @apply text-accent-500;
 }
 
-section ol li {
-  @apply pl-1;
-  @apply pb-1;
-}
 
-section ul li {
-  list-style: circle;
+.list li {
   @apply ml-4 mb-4;
 }
 
