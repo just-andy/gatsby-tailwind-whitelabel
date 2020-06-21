@@ -1,5 +1,5 @@
 import React from 'react'
-import StaticMap from "../elements/StaticMap"
+import Map from "../elements/GoogleMap"
 
 
 
@@ -10,7 +10,7 @@ const MapInfo = () => {
     return (
         <>
         <div id="map">
-            <StaticMap />
+            <Map />
         </div>
        
        <div>
